@@ -1,0 +1,41 @@
+/* Basic styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #141d26 ;
+    --second-bg-color: #243447;
+    --main-color: #fff;
+    --second-color: #c51f5d;
+  }
+  
+
+.body {
+    background: var(--main-bg-color);
+    color: var(--main-color);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 200%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 1366px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main a {
+    color: var(--second-color);
+}
+
