@@ -19,50 +19,54 @@
 
 <body class="body">
     <div class="wrapper">
-        <h1 id="title">SOLICITA TU PRESUPUESTO</h1>
-        <p id="description">Esta información nos permitirá brindarle un presupuesto acorde a sus necesidades</p>
+        <div class="form-header">
+            <img src="img/presupuesto.png" alt="Imagen de presupuesto" height="150px" width="150px">
+            <h1 id="title">SOLICITE SU PRESUPUESTO</h1>
+            <p id="description">Esta información nos permitirá brindarle un presupuesto acorde a sus necesidades.</p>
+        </div>
 
         <form action="get" id="survey-form">
             <div class="survey-form-field">
-                <label for="name" id="name-label">Nombre</label>
-                <input type="text" id="name" name="user_name" placeholder="Ingresa tu nombre" required>
+                <label for="name" id="name-label">Nombre <span>*</span></label>
+                <input type="text" id="name" name="user_name" placeholder="Ingrese su nombre" required
+                    autocomplete="off">
             </div>
             <div class="survey-form-field">
-                <label for="email" id="email-label">Email</label>
-                <input type="email" id="email" name="user_email" placeholder="Ingresa tu email" required>
+                <label for="email" id="email-label">Email <span>*</span></label>
+                <input type="email" id="email" name="user_email" placeholder="Ingrese su email" required
+                    autocomplete="off">
             </div>
             <div class="survey-form-field">
-                <label for="number" id="number-label">Teléfono</label>
-                <input type="number" id="number" name=number" placeholder="Ingresa tu telefono" min="6" max="15"
-                    required>
+                <label for="number" id="number-label">Teléfono <span>*</span></label>
+                <input type="number" id="number" name=number" placeholder="Ingrese su telefono" min="0" max="Nan"
+                    required autocomplete="off">
             </div>
             <div class="survey-form-field">
                 <label for="tel">¿Ya tiene un sitio web o es un proyecto desde cero?</label>
                 <select name="sitio_propio" id="dropdown">
-                    <option value="no">No tengo</option>
+                    <option value="no">Es un proyecto desde cero</option>
                     <option value="si">Ya tengo un sitio web </option>
                 </select>
             </div>
-            <div class="survey-form-field">
+            <div class="survey-form-field textarea">
                 <label for="proposito">¿Cuál es el propósito del sitio?</label>
                 <textarea name="proposito" rows="10" cols="50"
-                    placeholder="Escribe aquí el propósito deseado"></textarea>
+                    placeholder="Escriba aquí el propósito deseado"></textarea>
             </div>
-            <div class="survey-form-field">
-                <label for="objetivosComerciales">¿Cuáles son los objetivos comerciales que esperas con el
-                    sitio?</label>
+            <div class="survey-form-field textarea">
+                <label for="objetivosComerciales">¿Cuáles son sus objetivos comerciales?</label>
                 <textarea name="objetivosComerciales" rows="10" cols="50"
-                    placeholder="Escribe aquí el objetivo del proyecto"></textarea>
+                    placeholder="Escriba aquí el objetivo del proyecto"></textarea>
             </div>
-            <div class="survey-form-field">
-                <label for="visionNegocio">¿Cuál es la visión de tu negocio?</label>
+            <div class="survey-form-field textarea">
+                <label for="visionNegocio">¿Cuál es la visión de su negocio?</label>
                 <textarea name="visionNegocio" rows="10" cols="50"
-                    placeholder="Escribe aquí la visión de tu negocio"></textarea>
+                    placeholder="Escriba aquí la visión de tu negocio"></textarea>
             </div>
-            
+
             <div class="survey-form-field">
                 <button class="submit-btn" id="submit">
-                    <input type="button" value="ENVIAR">
+                    <input type="submit" value="ENVIAR">
                 </button>
             </div>
         </form>
