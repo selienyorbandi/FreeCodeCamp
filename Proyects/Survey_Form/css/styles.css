@@ -1,0 +1,88 @@
+/* Estilos básicos */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at -19.64% 37.72%,
+    #0069e8 0,
+    #0064e5 16.67%,
+    #1d5ddf 33.33%,
+    #5555d8 50%,
+    #734ccf 66.67%,
+    #8a42c5 83.33%,
+    #9d37b9 100%
+  );
+}
+
+.wrapper {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); /*  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 4rem;
+}
+
+#title {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+#description {
+  font-size: 1.5rem;
+}
+
+.survey-form-field {
+  display: grid;
+  padding: 0.5rem 0;
+  gap: 0.4rem;
+}
+
+.survey-form-field input,
+textarea,
+select {
+  height: 3.5rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(19.5px);
+  -webkit-backdrop-filter: blur(19.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1.2rem;
+}
+
+.survey-form-field input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-size: 1rem;
+}
+
+.survey-form-field label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.submit-btn {
+  font-weight: bold;
+  padding: .5rem;
+  background: rgba( 255, 255, 255, 0.20 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0.0px );
+-webkit-backdrop-filter: blur( 0.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
