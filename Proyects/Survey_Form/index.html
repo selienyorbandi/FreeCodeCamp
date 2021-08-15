@@ -38,11 +38,11 @@
             </div>
             <div class="survey-form-field">
                 <label for="number" id="number-label">Teléfono <span>*</span></label>
-                <input type="number" id="number" name=number" placeholder="Ingrese su telefono" min="0" max="Nan"
+                <input type="number" id="number" name=number" placeholder="Ingrese su telefono" min="0" max="9999999999999"
                     required autocomplete="off">
             </div>
             <div class="survey-form-field">
-                <label for="tel">¿Ya tiene un sitio web o es un proyecto desde cero?</label>
+                <label for="dropdown">¿Ya tiene un sitio web o es un proyecto desde cero?</label>
                 <select name="sitio_propio" id="dropdown">
                     <option value="no">Es un proyecto desde cero</option>
                     <option value="si">Ya tengo un sitio web </option>
@@ -64,6 +64,53 @@
                     placeholder="Escriba aquí la visión de tu negocio"></textarea>
             </div>
 
+            <fieldset class="survey-form-field checkListField">
+                <label for="servicios" class="fieldSetLabel">Servicios deseados</label>
+                <div>
+                    <input type="checkbox" name="servicios" id="ssl" value="ssl">
+                    <label for="ssl">Certificado de seguridad SSL</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="servicios" id="seo" value="seo">
+                    <label for="seo">Optimización para buscadores</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="servicios" id="hosting" value="hosting">
+                    <label for="hosting">Alojamiento del sitio</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="servicios" id="cms" value="cms">
+                    <label for="cms">Sitio autoadministrable</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="servicios" id="copywritting" value="copywritting">
+                    <label for="copywritting">Copywriting</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="servicios" id="multiIdiomas" value="multiIdiomas">
+                    <label for="multiIdiomas">Sitio en 2 o más idiomas</label>
+                </div>
+            </fieldset>
+            <fieldset class="survey-form-field buttonRadioField">
+                <label for="tiempo" class="fieldSetLabel">¿Cuál es el tiempo esperado para el proyecto?</label>
+                <div>
+                    <input type="radio" name="tiempo" id="menosde1" value="menosde1mes">
+                    <label for="menosde1">Menos de 1 mes</label>
+                </div>
+                <div>
+                    <input type="radio" name="tiempo" id="entre1y3" value="entre1y3meses">
+                    <label for="entre1y3">Entre 1 y 3 meses</label>
+                </div>
+                <div>
+                    <input type="radio" name="tiempo" id="3meses" value="3meses">
+                    <label for="3meses">Más de 3 meses</label>
+                </div>
+            </fieldset>
+            <div class="survey-form-field textarea">
+                <label for="visionNegocio">¿Desea agregar algo más?</label>
+                <textarea name="more-info" rows="10" cols="50"
+                    placeholder="Escriba aquí"></textarea>
+            </div>
             <div class="survey-form-field">
                 <button class="submit-btn" id="submit">
                     <input type="submit" value="ENVIAR">

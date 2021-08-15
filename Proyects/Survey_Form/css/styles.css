@@ -97,12 +97,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .survey-form-field input:focus,
 textarea:focus,
-select:focus,select:focus {
+select:focus,
+select:focus {
   background-color: #fff;
-
 }
 
-.survey-form-field label {
+.survey-form-field label,
+legend {
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0 0.5rem;
@@ -110,15 +111,68 @@ select:focus,select:focus {
 
 .submit-btn {
   font-weight: bold;
+  margin: 1rem 0;
   padding: 0.3rem;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .submit-btn:hover {
-  background: #5555d8;
+  background: #734ccf;
 }
+
+.checkListField, .buttonRadioField{
+  width: 100%;
+  border: none;
+  padding: 0 0.7rem;
+}
+
+.checkListField .fieldSetLabel {
+  padding: .7rem 0 .5rem 0.5rem;
+}
+
+.checkListField div {
+  display: grid;
+  grid-template-columns: .02fr 1fr;
+  align-items: center;
+}
+
+.checkListField div label, .buttonRadioField div label {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.checkListField input[type="checkbox"], .buttonRadioField input[type="radio"] {
+  height: 1.5rem;
+  width: 1.5rem;
+  box-shadow: none;
+  backdrop-filter: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  }
+
+  .buttonRadioField {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: .7rem .5rem;
+  }
+
+  .buttonRadioField div {
+    display: grid;
+    grid-template-columns: .05fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonRadioField > .fieldSetLabel {
+    grid-column: span 3;
+    padding: 0;
+    align-self: flex-start;
+  }
+  
+  .buttonRadioField .fieldSetLabel {
+    padding: .7rem .5rem;
+  }
