@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribute Page - Free Code Camp</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/779db6cf6f.js" crossorigin="anonymous"></script>
+
+
+    <title>Gustavo Cerati - Tributo</title>
+
+
+
 </head>
-<body>
-<h1>Próximamente</h1>    
+
+<body class="body">
+    <nav class="nav-desktop">
+        <nav class="navContentDesktop">
+            <img src="img/gustavoCeratiLogo.png" alt="Logo no oficial creado para este sitio sobre Gustavo Cerati">
+            <ul class="nav-menu">
+                <li><a href="#header">INICIO</a></li>
+                <li><a href="#biografia">BIOGRAFÍA</a></li>
+                <li><a href="#discografia">DISCOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <nav class="mobileMenu">
+        <img src="img/gustavoCeratiLogo.png" alt="Logo no oficial creado para este sitio sobre Gustavo Cerati">
+        <input type="checkbox" id="check">
+        <label for="check" class="bar-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="#header">INICIO</a></li>
+            <li><a href="#biografia">BIOGRAFÍA</a></li>
+            <li><a href="#discografia">DISCOGRAFÍA</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper" id="main">
+
+        <header class="header" id="header">
+            <div class="headerContent">
+                <div class="headerTitle">
+                    <h1 id="title">GUSTAVO <br> CERATI</h1>
+                    <p>1959-2014</p>
+                </div>
+                <div class="headerImg">
+                    <img src="img/gustavoCeratiHeader.png"
+                        alt="Gustavo Cerati en blanco y negro, mirando hacia un costado">
+                </div>
+            </div>
+        </header>
+        <section class="biografia">
+            <div class="biografiaContent">
+                <h2 id="biografia">BIOGRAFÍA</h2>
+                <div class="videoContent">
+                    <div class="biografiaVideos">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_97IXWPMR2U?controls=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="biografiaDescripcion">
+                        <p>
+                            Un recorrido por la vida de <br> <span>GUSTAVO CERATI</span> <br>
+                            y el éxito masivo de <br><span>SODA STEREO</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="discografia">
+            <div class="discografiaContent">
+                <h2 id="discografia">DISCOGRAFÍA</h2>
+                <div class="bandaTitle">
+                    <h3>SODA STEREO</h3>
+                </div>
+                <div class="albumes">
+
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footerContent">
+                <div class="my-profile">
+                    <p>Sitio realizado por Selien Yorbandi</p>
+                    <a href="https://github.com/selienyorbandi" target="blank"><img src="img/logotipo-de-github.png"
+                            alt="Perfil de Github de Selien Yorbandi" width="25px"></a>
+                    <a href="https://www.linkedin.com/in/selien-yorbandi-92a582210/" target="blank"><img
+                            src="img/linkedin.png" alt="Perfil de LinkedIn de Selien Yorbandi" width="25px"></a>
+                </div>
+                <p>Sitio en construcción</p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
