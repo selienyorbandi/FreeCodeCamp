@@ -62,7 +62,7 @@ html {
 }
 
 .navContentDesktop .nav-menu a,
-li {
+.navContentDesktop .nav-menu li {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -188,7 +188,7 @@ li {
   font-size: calc(1rem + 1.4vw);
   font-weight: 700;
   width: 100%;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
 }
 
 /* ========================================== */
@@ -200,20 +200,143 @@ li {
 }
 
 .footerContent {
-    max-width: 1440px;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.footerContent .my-profile a {
+  padding: 0 0 0 0.5rem;
+}
+
+.my-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====================================== */
+/* ======= MEDIA QUERIES ======= */
+
+@media screen and (max-width: 723px) {
+  
+.wrapper{
+  overflow-x: hidden;
+}
+
+  /* Barra de navegación estilo hamburguesa */
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+  }
+
+  .mobileMenu img {
+    height: 70%;
+    padding: 0 2rem;
+  }
+
+  .bar-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 2rem;
+  }
+
+  .nav-menu {
+    position: fixed;
     width: 100%;
-    margin: auto;
-    padding: 1.5rem 2rem;
+    height: 0px;
+    top: 8vh;
+    background-color: rgba(0, 0, 0, 0.98);
     text-align: center;
+    transition: all 0.5s;
+    padding: 0;
+    z-index: 300;
+  }
+
+  .nav-menu ul {
+    padding: 0;
+  }
+
+  .nav-menu li {
+    display: none;
+    line-height: 2rem;
+    margin: 2rem 0;
+    transition: all 0.5s;
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .nav-menu li a:active,
+  .nav-menu li a:hover {
+    color: #DBCE02;
+    transition: all 0.5s;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .nav-menu {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+  #check:checked ~ .nav-menu li {
+    display: block;
+  }
+
+  /* Header */
+  
+  .headerContent {
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .headerContent .headerImg {
+    height: calc(1rem + 50vh);
+  }
+
+  /* Biografía */
+
+  .videoContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biografiaDescripcion {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  /* Footer */
+  .my-profile{
+   flex-direction: column;
+  }
+
+  .linksFooter {
+    padding: .2rem 0;
+  }
 }
  
-  .footerContent .my-profile a {
-    padding: 0 0 0 .5rem;
-  }
-
-  .my-profile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
