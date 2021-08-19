@@ -113,12 +113,6 @@ html {
 }
 /* ========================================== */
 /* Biografia */
-
-.biografiaAnchor {
-  display: block;
-  position: relative;
-}
-
 .biografia {
   background: #000;
   color: #fff;
@@ -168,18 +162,18 @@ html {
 
 /* ========================================== */
 /* Discografia */
-.discografiaContent {
+.discografiaContent, .albumes {
   width: 100%;
   max-width: 1440px;
   margin: auto;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   position: relative;
 }
 
 .discografiaContent h2 {
   font-size: calc(1rem + 4vw);
   font-weight: 700;
-  padding-bottom: 1rem;
+  padding-bottom: .4rem;
 }
 
 .bandaTitle {
@@ -188,9 +182,112 @@ html {
   font-size: calc(1rem + 1.4vw);
   font-weight: 700;
   width: 100%;
-  padding: 0.3rem 1rem;
+  padding: 0rem 1rem;
 }
 
+/* Layout para los álbumes */
+
+.albumes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.albumOscuro,
+.albumClaro {
+  width: 300px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3rem;
+  
+}
+
+.tituloLargo {
+  font-size: 80%;
+}
+
+.escucharAlbum {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+/* Imágen de portada de cada album */
+.albumImg {
+  width: 75%;
+  height: 75%;
+  margin: .6rem 0;
+  border-radius: .3rem;
+  overflow: hidden;
+}
+.albumImg > img {
+  width: 100%;
+  height: auto;
+}
+
+/* Colores generales para cada album */
+.albumOscuro,
+.albumOscuro > a {
+  color: #000;
+}
+.albumClaro,
+.albumClaro > a {
+  color: #fff;
+}
+
+/* Color de los albumes */
+#sodaStereo1984 {
+  background: #fafb12;
+}
+#nadaPersonal1985 {
+  background: #45107c;
+}
+#signos1986 {
+  background: #70650B;
+}
+#ruidoBlanco1987 {
+  background: #DBCDB3;
+}
+#dobleVida1988 {
+  background: #ABA59D;
+}
+#languis1989 {
+  background: #053C8E;
+}
+#cancionAnimal1990 {
+  background: #E97218;
+}
+#rexMix1991 {
+  background: #00EACF;
+}
+#dynamo1992 {
+  background: #DE562C;
+}
+#zonaDePromesas1993 {
+  background: #C3E923;
+}
+#sueñoStereo1995 {
+  background: #514F53;
+}
+#comfortMusicaParaVolar1996 {
+  background: #A3C1CB;
+}
+#elUltimoConciertoA1997{
+  background: #d46a00;
+}
+#elUltimoConciertoB1997 {
+  background: #03c8bb;
+}
+#giraMeVerasVolver1_2008 {
+  background: #0A1025;
+}
+#giraMeVerasVolver2_2008 {
+  background: #A14975;
+}
 /* ========================================== */
 /* Footer */
 .footer {
