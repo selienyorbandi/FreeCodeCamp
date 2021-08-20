@@ -137,7 +137,7 @@ html {
   align-items: center;
 }
 .biografiaVideos {
-  width: 100vw;
+  width: 90%;
   height: 70vh;
   border: #fff 5px;
 }
@@ -305,6 +305,21 @@ html {
 }
 #fuerzaNatural2009 {
   background: #1B2421;
+}
+#coloresSantos1992 {
+  background: #33158D;
+}
+#friccionGrupo{
+  background: #0567BF;
+}
+#medidaUniversal1999{
+  background: #ecb474;
+}
+#masBien2001 {
+  background: #84b4cf;
+}
+#siempreEsHoyReversiones2003 {
+  background: #EC84AF;
 }
 /* ========================================== */
 /* Footer */
