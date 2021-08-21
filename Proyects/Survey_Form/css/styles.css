@@ -19,6 +19,7 @@
     #8a42c5 83.33%,
     #9d37b9 100%
   );
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -34,6 +35,7 @@
   justify-content: center;
   margin: 2rem auto;
   padding: 3%;
+  overflow-x: hidden;
 }
 
 .form-header {
@@ -43,7 +45,7 @@
   align-items: center;
 }
 #title {
-  font-size: 4rem;
+  font-size: calc(2rem + 1.9vw);
   font-weight: bold;
   padding: 0.5rem;
   color: #000000cc;
@@ -122,28 +124,31 @@ legend {
   background: #734ccf;
 }
 
-.checkListField, .buttonRadioField{
+.checkListField,
+.buttonRadioField {
   width: 100%;
   border: none;
   padding: 0 0.7rem;
 }
 
 .checkListField .fieldSetLabel {
-  padding: .7rem 0 .5rem 0.5rem;
+  padding: 0.7rem 0 0.5rem 0.5rem;
 }
 
 .checkListField div {
   display: grid;
-  grid-template-columns: .02fr 1fr;
+  grid-template-columns: 0.02fr 1fr;
   align-items: center;
 }
 
-.checkListField div label, .buttonRadioField div label {
+.checkListField div label,
+.buttonRadioField div label {
   font-size: 1.4rem;
   font-weight: 400;
 }
 
-.checkListField input[type="checkbox"], .buttonRadioField input[type="radio"] {
+.checkListField input[type="checkbox"],
+.buttonRadioField input[type="radio"] {
   height: 1.5rem;
   width: 1.5rem;
   box-shadow: none;
@@ -151,27 +156,41 @@ legend {
   border: none;
   font-size: 1rem;
   padding: 0.5rem;
-  }
+}
 
+.buttonRadioField {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.7rem 0.5rem;
+}
+
+.buttonRadioField div {
+  display: grid;
+  grid-template-columns: 0.05fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonRadioField > .fieldSetLabel {
+  grid-column: span 3;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.buttonRadioField .fieldSetLabel {
+  padding: 0.5rem 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 488px) {
+  .wrapper {
+    margin: 0;
+    border-radius: 0;
+    padding-top: 2rem;
+  }
   .buttonRadioField {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: .7rem .5rem;
+    display: flex;
+    flex-direction: column;
   }
-
-  .buttonRadioField div {
-    display: grid;
-    grid-template-columns: .05fr 1fr;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .buttonRadioField > .fieldSetLabel {
-    grid-column: span 3;
-    padding: 0;
-    align-self: flex-start;
-  }
-  
-  .buttonRadioField .fieldSetLabel {
-    padding: .7rem .5rem;
-  }
+}
