@@ -7,15 +7,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/ico" href="img/javaLogo.ico">
-    <meta name="description" content="This site contains technical documentation about Java Standard Edition"/>
+    <meta name="description" content="This site contains technical documentation about Java Standard Edition" />
 
     <title>Java SE Documentation - FreeCodeCamp.org</title>
-    
+
 </head>
 
 <body class="body">
     <div class="wrapper">
+        <header class="header">
+            <h1>JAVA DOCUMENTATION</h1>
+        </header>
+        <aside class="sideNavigation">
+            <img src="img/logoJava.png" alt="Java Logo">
+            <h2>Table of contents</h2>
+            <ol class="sectionLinks">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#gettingStarted">Get Started</a></li>
+                <li>Sintax</li>
+                <li>Comments</li>
+                <li>Variables</li>
+                <li>Data Types</li>
+                <li>Type Casting</li>
+                <li>Operators</li>
+                <li>Strings</li>
+                <li>Math</li>
+                <li>Booleans</li>
+                <li>If Else</li>
+                <li>Switch</li>
+                <li>While</li>
+                <li>For</li>
+                <li>Break/Continue</li>
+                <li>Arrays</li>
+            </ol>
+        </aside>
+        <main class="main">
+            <section class="introduction" id="introduction">
+                <h2>INTRODUCTION</h2>
+                <hr>
+                <h3>What is Java?</h3>
+                <p>Java is a popular programming language, created in 1995.</p>
+                <p>It is owned by Oracle, and more than 3 billion devices run Java.</p>
+                <p>It is used for:</p>
+                <ul>
+                    <li>Mobile applications (specially Android apps)</li>
+                    <li>Desktop applications</li>
+                    <li>Web applications</li>
+                    <li>Web servers and application servers</li>
+                    <li>Games</li>
+                    <li>Database connection</li>
+                    <li>And much, much more!</li>
+                </ul>
+                <p>In the Java programming language, all source code is first written in plain text files ending with
+                    the .java extension. Those source files are then compiled into .class files by the javac compiler. A
+                    .class file does not contain code that is native to your processor; it instead contains bytecodes —
+                    the machine language of the Java Virtual Machine1 (Java VM). The java launcher tool then runs your
+                    application with an instance of the Java Virtual Machine.
+                </p>
+                <figure class="contentImg">
+                    <img src="img/Introduction/bytecode.gif" alt="An overview of the software development process.">
+                    <figcaption>An overview of the software development process.</figcaption>
+                </figure>
+                <p>Because the <strong>Java VM</strong> is available on many different operating systems, the same
+                    .class files are
+                    capable of running on Microsoft Windows, the Solaris™ Operating System (Solaris OS), Linux, or Mac
+                    OS. Some virtual machines, such as the Java SE HotSpot at a Glance, perform additional steps at
+                    runtime to give your application a performance boost. This includes various tasks such as finding
+                    performance bottlenecks and recompiling (to native code) frequently used sections of code.
+                </p>
+                <figure class="contentImg">
+                    <img src="img/Introduction/helloWorld.gif"
+                        alt="Through the Java VM, the same application is capable of running on multiple platforms.">
+                    <figcaption>Through the Java VM, the same application is capable of running on multiple platforms.
+                    </figcaption>
+                </figure>
+                <h3>The Java Platform</h3>
+                <p>A platform is the hardware or software environment in which a program runs. We've already mentioned
+                    some of the most popular platforms like Microsoft Windows, Linux, Solaris OS, and Mac OS. Most
+                    platforms can be described as a combination of the operating system and underlying hardware. The
+                    Java platform differs from most other platforms in that it's a software-only platform that runs on
+                    top of other hardware-based platforms.</p>
+                <p>The Java platform has two components:</p>
+                <ul>
+                    <li>The <strong>Java Virtual Machine</strong></li>
+                    <li>The <strong>Java Application Programming Interface (API)</strong></li>
+                </ul>
+                <p>You've already been introduced to the Java Virtual Machine; it's the base for the Java platform and
+                    is ported onto various hardware-based platforms.</p>
+                <p>The API is a large collection of ready-made software components that provide many useful
+                    capabilities. It is grouped into libraries of related classes and interfaces; these libraries are
+                    known as packages.</p>
+                <figure class="contentImg"">
+                    <img src=" img/Introduction/api.gif"
+                    alt="The API and Java Virtual Machine insulate the program from the underlying hardware.">
+                    <figcaption>The API and Java Virtual Machine insulate the program from the underlying hardware.
+                    </figcaption>
+                </figure>
 
+                <h3>Why Use Java?</h3>
+                <ul>
+                    <li>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</li>
+                    <li>It is one of the most popular programming language in the world</li>
+                    <li>It is easy to learn and simple to use</li>
+                    <li>It is open-source and free</li>
+                    <li>It is secure, fast and powerful</li>
+                    <li>It has a huge community support (tens of millions of developers)</li>
+                    <li>Java is an object oriented language which gives a clear structure to programs and allows code to
+                        be reused, lowering development costs</li>
+                    <li>As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa
+                    </li>
+                </ul>
+            </section>
+            <section class="gettingStarted" id="gettingStarted">
+                <h2>GETTING STARTED</h2>
+                <hr>
+                <h3>"Hello World" for the NetBeans IDE</h3>
+                <p>It's time to write your first application! These detailed instructions are for users of the NetBeans
+                    IDE. The NetBeans IDE runs on the Java platform, which means that you can use it with any operating
+                    system for which there is a JDK available. These operating systems include Microsoft Windows,
+                    Solaris OS, Linux, and Mac OS X.</p>
+                <h4>Requirements</h4>
+                <p>To write your first program, you'll need:</p>
+                <ul>
+                    <li><a href="https://www.oracle.com/java/technologies/javase-downloads.html">The Java SE Development
+                            Kit</a></li>
+                    <li><a href="https://netbeans.apache.org/download/index.html">The NetBeans IDE</a></li>
+                </ul>
+                <h4>Creating your First Application</h4>
+                <p>Your first application, HelloWorldApp, will simply display the greeting "Hello World!"</p>
+                <h5>Create an IDE Project</h5>
+                <ol>
+                    <li>Launch the <strong>NetBeans IDE.</strong></li>
+                    <li>In the NetBeans IDE, choose <strong>File | New Project</strong></li>
+                    <figure class="contentImg">
+                        <img src="img/GettingStarted/newProyect.png"
+                            alt="NetBeans IDE with the File | New Project menu item selected.">
+                        <figcaption>NetBeans IDE with the File | New Project menu item selected.</figcaption>
+                    </figure>
+                    <li>In the New Project wizard, expand the Java category and select <strong>Java Application</strong>
+                        as shown in the
+                        following figure:</li>
+                    <figure class="contentImg">
+                        <img src="img/GettingStarted/newProyect2.png"
+                            alt="NetBeans IDE, New Project wizard, Choose Project page.">
+                        <figcaption>NetBeans IDE, New Project wizard, Choose Project page.</figcaption>
+                    </figure>
+                    <li>In the Name and Location page of the wizard, do the following (as shown in the figure below):
+                    </li>
+                    <ul>
+                        <li>In the <strong>Project Name field</strong>, type Hello World App.</li>
+                        <li>In the <strong>Create Main Class field</strong>, type helloworldapp.HelloWorldApp.</li>
+                    </ul>
+                    <figure class="contentImg">
+                        <img src="img/GettingStarted/newProyect3.png" alt="">
+                        <figcaption>NetBeans IDE, New Project wizard, Name and Location page.</figcaption>
+                    </figure>
+                    <li>Click Finish.</li>
+                </ol>
+                <p>The project is created and opened in the IDE. You should see the following components:</p>
+                <ul>
+                    <li>The <strong>Projects</strong> window, which contains a tree view of the components of the
+                        project, including source files, libraries that your code depends on, and so on.</li>
+                    <li>The <strong>Source Editor</strong> window with a file called HelloWorldApp.java open.</li>
+                    <li>The <strong>Navigator</strong> window, which you can use to quickly navigate between elements
+                        within the selected class.</li>
+                </ul>
+                <figure class="contentImg">
+                    <img src="img/GettingStarted/newProyect4.png" alt="">
+                    <figcaption>NetBeans IDE with the HelloWorldApp project open.</figcaption>
+                </figure>
+                <h5>Add Code to the Generated Source File</h5>
+                <p>When you created this project, you left the Create Main Class checkcbox selected in the New Project
+                    wizard. The IDE has therefore created a skeleton class for you. You can add the "Hello World!"
+                    message to the skeleton code by replacing the line:</p>
+                <code class="code">// TODO code application logic here</code>
+                <p>with the line:</p>
+                <code class="code">System.out.println("Hello World!"); // Display the string.</code>
+                <p>Optionally, you can replace these four lines of generated code:</p>
+                <br>
+                <code class="code">/** <br>
+                    * <br>
+                    * @author <br>
+                    */</code>
+                <br>
+                <p>with these lines:</p>
+                <br>
+                <code class="code">/** <br>
+                    * The HelloWorldApp class implements an application that <br>
+                    * simply prints "Hello World!" to standard output. <br>
+                    */
+                </code>
+                <br> <br>
+                <p>These four lines are a code comment and do not affect how the program runs. Later sections of this
+                    tutorial explain the use and format of code comments.</p>
+                <h5>Be Careful When You Type </h5>
+                <p>Type all code, commands, and file names exactly as shown. Both the compiler (javac) and launcher
+                    (java) are <strong>case-sensitive,</strong> so you must capitalize consistently.</p>
+                <p>Save your changes by choosing <strong>File | Save.</strong></p>
+                <p>The file should look something like the following:</p>
+                <br>
+                <code class="code">/* <br>
+                    * To change this template, choose Tools | Templates <br>
+                    * and open the template in the editor. <br>
+                    */ <br><br> 
+                   
+                   package helloworldapp; <br> <br>
+                   
+                   /** <br>
+                    * The HelloWorldApp class implements an application that <br>
+                    * simply prints "Hello World!" to standard output. <br>
+                    */ <br>
+                   public class HelloWorldApp { <br><br><br>
+                   
+                      
+                       /** <br>
+                        * @param args the command line arguments <br>
+                        */ <br>
+                       public static void main(String[] args) { <br>
+                           System.out.println("Hello World!"); // Display the string. <br>
+                       } <br> <br>
+                   
+                   }</code>
+                <br>
+                <h5>Compile the Source File into a .class File</h5>
+                <p>To compile your source file, choose <strong>Run | Build Project (Hello World App)</strong> from the
+                    IDE's main menu.</p>
+                <p>The Output window opens and displays output similar to what you see in the following figure:</p>
+                <figure class="contentImg">
+                    <img src="img/GettingStarted/newProyect5.png" alt="">
+                    <figcaption>Output window showing results of building the HelloWorld project.</figcaption>
+                </figure>
+                <p>If the build output concludes with the statement BUILD SUCCESSFUL, congratulations! You have
+                    successfully compiled your program!</p>
+                <p>If the build output concludes with the statement BUILD FAILED, you probably have a syntax error in
+                    your code. Errors are reported in the Output window as hyperlinked text. You double-click such a
+                    hyperlink to navigate to the source of an error. You can then fix the error and once again choose
+                    <strong>Run | Build Project.</strong></p>
+                <p>When you build the project, the bytecode file HelloWorldApp.class is generated. You can see where the
+                    new file is generated by opening the Files window and expanding the Hello World
+                    App/build/classes/helloworldapp node as shown in the following figure.</p>
+                <figure class="contentImg">
+                    <img src="img/GettingStarted/newProyect6.png" alt="">
+                    <figcaption>Files window, showing the generated .class file.</figcaption>
+                </figure>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="my-profile">
+                <p>Website made by Selien Yorbandi</p>
+                <div class="linksFooter">
+                    <a href="https://github.com/selienyorbandi" target="blank"><img
+                            src="/Proyects/Build_a_Tribute_Page/img/logotipo-de-github.png"
+                            alt="Github profile of Selien Yorbandi" width="25px"></a>
+                    <a href="https://www.linkedin.com/in/selien-yorbandi-92a582210/" target="blank"><img
+                            src="/Proyects/Build_a_Tribute_Page/img/linkedin.png"
+                            alt="LinkedIn profile of Selien Yorbandi" width="25px"></a>
+                </div>
+            </div>
+            <p>Under construction</p>
+        </footer>
     </div>
 </body>
 
