@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/ico" href="img/javaLogo.ico">
     <meta name="description" content="This site contains technical documentation about Java Standard Edition" />
-
     <title>Java SE Documentation - FreeCodeCamp.org</title>
+    <script src="https://kit.fontawesome.com/779db6cf6f.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -18,31 +18,63 @@
         <header class="header">
             <h1>JAVA DOCUMENTATION</h1>
         </header>
-        <nav class="sideNavigation" id="navbar">
+        <div class="desktopMenu">
+            <nav class="sideNavigation" id="navbar">
+                <header>
+                    <img src="img/logoJava.png" alt="Java Logo">
+                    <h2>Table of contents</h2>
+                </header>
+                <ol class="sectionLinks">
+                    <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                    <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
+                    <li>Sintax</li>
+                    <li>Comments</li>
+                    <li>Variables</li>
+                    <li>Data Types</li>
+                    <li>Type Casting</li>
+                    <li>Operators</li>
+                    <li>Strings</li>
+                    <li>Math</li>
+                    <li>Booleans</li>
+                    <li>If Else</li>
+                    <li>Switch</li>
+                    <li>While</li>
+                    <li>For</li>
+                    <li>Break /Continue</li>
+                    <li>Arrays</li>
+                </ol>
+            </nav>
+        </div>
+        <nav class="mobileMenu">
+            <img src="img/logoJava.png" alt="Java Logo" class="headerImg">
             <header>
-                <img src="img/logoJava.png" alt="Java Logo">
-                <h2>Table of contents</h2>
+                <h1>JAVA DOCUMENTATION</h1>
             </header>
-            <ol class="sectionLinks">
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
                 <li><a href="#introduction" class="nav-link">Introduction</a></li>
                 <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
-                <li>Sintax</li>
-                <li>Comments</li>
-                <li>Variables</li>
-                <li>Data Types</li>
-                <li>Type Casting</li>
-                <li>Operators</li>
-                <li>Strings</li>
-                <li>Math</li>
-                <li>Booleans</li>
-                <li>If Else</li>
-                <li>Switch</li>
-                <li>While</li>
-                <li>For</li>
-                <li>Break/Continue</li>
-                <li>Arrays</li>
-            </ol>
+                <li><a href="#">Sintax</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Variables</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Operators</a></li>
+                <li><a href="#">Strings</a></li>
+                <li><a href="#">Math</a></li>
+                <li><a href="#">Booleans</a></li>
+                <li><a href="#">If Else</a></li>
+                <li><a href="#">Switch</a></li>
+                <li><a href="#">While</a></li>
+                <li><a href="#">For</a></li>
+                <li><a href="#">Break /Continue</a></li>
+                <li><a href="#">Arrays</a></li>
+            </ul>
         </nav>
+        
         <main class="main" id="main-doc">
             <section class="introduction main-section" id="introduction">
                 <header>

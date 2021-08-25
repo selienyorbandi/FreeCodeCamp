@@ -41,6 +41,11 @@
   font-family: "IBM Plex Mono", monospace;
 }
 
+.header input,
+.header label {
+  display: none;
+}
+
 /* Side Bar */
 
 .sideNavigation {
@@ -56,19 +61,32 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
+.responsiveMenu input,
+.responsiveMenu i {
+  display: none;
+}
+
+.sideNavigation header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+
 .sideNavigation img {
-  width: calc(5rem + 8vw);
+  width: calc(3rem + 8vw);
   padding: 1rem;
   margin: 0;
-  align-self: center;
 }
 
 .sideNavigation h2 {
-  padding: 0.5rem 0;
+  font-size: calc(0.5rem + 1vw);
+  padding: 0rem 0 1rem 0;
 }
 
 .sectionLinks li {
@@ -79,16 +97,18 @@
   box-shadow: rgba(0, 0, 0, 0.383) 0.1rem 0.2rem 1rem;
 }
 
-.sectionLinks li:hover{
-    transform: scale(1.1);
+.sectionLinks li:hover {
+  transform: scale(1.1);
 }
 
 .sectionLinks li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
-
+.mobileMenu {
+  display: none;
+}
 
 /* Main */
 .main {
@@ -103,48 +123,48 @@
   padding-bottom: 1rem;
 }
 .contentImg {
-    padding: 2rem 0;
-    text-align: center;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 .main section img {
   width: calc(30rem + 6vw);
 }
 
-.main h2{
-    padding: .5rem 0;
-    color: #EC3233;
-    font-weight: 700;
-    font-size: 2rem;
+.main h2 {
+  padding: 0.5rem 0;
+  color: #ec3233;
+  font-weight: 700;
+  font-size: 2rem;
 }
-.main h3{
-    font-size: 1.5rem;
+.main h3 {
+  font-size: 1.5rem;
 }
-.main h4{
-    font-size: 1.2rem;
+.main h4 {
+  font-size: 1.2rem;
 }
-.main h5{
-    font-size: 1rem;
+.main h5 {
+  font-size: 1rem;
 }
 .main strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 .main section .code {
-   color: #282C34;
-   padding: .2rem 0;
+  color: #282c34;
+  padding: 0.2rem 0;
 }
 .main h3,
 .main h4,
 .main h5 {
-    padding: 1rem 0 .5rem 0;
+  padding: 1rem 0 0.5rem 0;
 }
 
 .main ul,
 .main ol {
-    padding: .3rem 1rem 1rem 1.5rem;
+  padding: 0.3rem 1rem 1rem 1.5rem;
 }
 .main p {
-    padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 /* Footer */
 .footer {
@@ -158,4 +178,127 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* ============================================== */
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1366px) {
+  .sideNavigation {
+    padding: 0.1rem;
+    margin: 0;
+  }
+  .sideNavigation .sectionLinks li {
+    padding: 0.5rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 848px) {
+  /* General Layout changes */
+  .main {
+    margin: 0;
+    grid-column: 1 / -1;
+  }
+  .header {
+    display: none;
+  }
+  .footer {
+    margin: 0;
+  }
+
+  /* Responsive Menu */
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background-color: #0075bd;
+  }
+
+  .mobileMenu header {
+    color: #fff;
+    font-size: calc(1.1rem + 1vw);
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .headerImg {
+    height: 5rem;
+    padding: 0 2rem;
+  }
+
+  .bar-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 2rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    height: 0%;
+    width: 80%;
+    top: 15vh;
+    left: 0;
+    background-color: #0075bd;
+    text-align: center;
+    transition: all .2s;
+    padding: 0;
+    z-index: 300;
+  }
+
+  .nav-menu ul {
+    padding: 0;
+  }
+
+  .nav-menu li {
+    display: none;
+    line-height: 2rem;
+    margin: 2rem 0;
+    transition: all 0.2s;
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .nav-menu li a:active,
+  .nav-menu li a:hover {
+    color: #ec3233;
+    transition: all 0.2s;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .nav-menu {
+    height: auto;
+    padding: 1rem 0;
+    width: 80%;
+    top: 15vh;
+    left: 0;
+  }
+
+  #check:checked ~ .nav-menu li {
+    display: block;
+    padding: 0.3rem 2rem;
+    margin: 0 2rem;
+    text-align: left;
+    border: rgba(0, 0, 0, 0.315) solid 3px;
+    box-shadow: rgba(0, 0, 0, 0.383) 0.1rem 0.2rem 1rem;
+  }
+
 }
