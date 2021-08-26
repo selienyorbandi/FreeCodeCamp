@@ -253,8 +253,6 @@
     transition: all .2s;
     padding: 0;
     z-index: 300;
-    overflow-y: scroll;
-    overflow-x: hidden;
   }
 
   .nav-menu ul {
@@ -287,12 +285,11 @@
   }
 
   #check:checked ~ .nav-menu {
-    height: 80vh;
+    height: auto;
     padding: 1rem 0;
     width: 80%;
     top: 15vh;
     left: 0;
-    position: absolute;
   }
 
   #check:checked ~ .nav-menu li {
