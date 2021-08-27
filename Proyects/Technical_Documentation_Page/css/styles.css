@@ -166,6 +166,16 @@
 .main p {
   padding: 0.5rem 0;
 }
+.main .notes {
+  background: #ffffcc;
+  padding: 1.3rem;
+  margin: 1rem 0;
+  width: fit-content;
+}
+.notes span {
+  font-weight: bold;
+}
+
 /* Footer */
 .footer {
   grid-area: footer;
