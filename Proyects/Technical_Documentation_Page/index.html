@@ -28,8 +28,8 @@
                     <li><a href="#introduction" class="nav-link">Introduction</a></li>
                     <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
                     <li><a href="#java_sintax">Sintax</a></li>
-                    <li>Comments</li>
-                    <li>Variables</li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#variables">Variables</a></li>
                     <li>Data Types</li>
                     <li>Type Casting</li>
                     <li>Operators</li>
@@ -58,8 +58,8 @@
                 <li><a href="#introduction" class="nav-link">Introduction</a></li>
                 <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
                 <li><a href="#java_sintax">Sintax</a></li>
-                <li><a href="#">Comments</a></li>
-                <li><a href="#">Variables</a></li>
+                <li><a href="#comments">Comments</a></li>
+                <li><a href="#variables">Variables</a></li>
                 <li><a href="#">Data Types</a></li>
                 <li><a href="#">Type Casting</a></li>
                 <li><a href="#">Operators</a></li>
@@ -247,28 +247,31 @@
                 <p>Save your changes by choosing <strong>File | Save.</strong></p>
                 <p>The file should look something like the following:</p>
                 <br>
-                <code class="code">/* <br>
+                <code class="code"> <span class="codeComment">
+                    /* <br>
                     * To change this template, choose Tools | Templates <br>
                     * and open the template in the editor. <br>
                     */ <br><br> 
+                </span>
                    
-                   package helloworldapp; <br> <br>
-                   
-                   /** <br>
-                    * The HelloWorldApp class implements an application that <br>
-                    * simply prints "Hello World!" to standard output. <br>
-                    */ <br>
-                   public class HelloWorldApp { <br><br><br>
-                   
-                      
-                       /** <br>
+                   <span class="codeKeyword">package</span> helloworldapp; <br> <br>
+                   <span class="codeComment">
+                        /** <br>
+                        * The HelloWorldApp class implements an application that <br>
+                        * simply prints "Hello World!" to standard output. <br>
+                        */ <br>
+                   </span>
+                   <span class="codeKeyword">public class</span> HelloWorldApp { <br><br><br>
+                   <span class="codeComment">
+                        /** <br>
                         * @param args the command line arguments <br>
                         */ <br>
-                       public static void main(String[] args) { <br>
-                           System.out.println("Hello World!"); // Display the string. <br>
-                       } <br> <br>
-                   
-                   }</code>
+                        public static void main(String[] args) { <br>
+                            System.out.println("Hello World!"); // Display the string. <br>
+                        } <br>
+                    }<br>
+                   </span>                      
+                   </code>
                 <br>
                 <h5>Compile the Source File into a .class File</h5>
                 <p>To compile your source file, choose <strong>Run | Build Project (Hello World App)</strong> from the
@@ -302,29 +305,108 @@
                 <p>In the previous chapter, we created a Java file called Main.java, and we used the following code to
                     print "Hello World" to the screen:</p>
                 <code class="code">
-                    public class Main { <br>
-                        public static void main(String[] args) { <br>
-                          System.out.println("Hello World"); <br>
+                    <span class="codeKeyword">public class</span>  Main { <br>
+                        <span class="codeKeyword">public static void</span> main(String[] args) { <br>
+                          System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
                         } <br>
                       }    <br>
                 </code>
                 <p>Every line of code that runs in Java must be inside a class. In our example, we named the class
-                    <strong>Main</strong>. A class should always start with an uppercase first letter.</p>
+                    <strong>Main</strong>. A class should always start with an uppercase first letter.
+                </p>
                 <p>The <strong>main()</strong> method is required and you will see it in every Java program:</p>
-                <code class="code">public static void main(String[] args)</code>
+                <code class="code"><span class="codeKeyword">public static void</span>  main(String[] args)</code>
                 <p>Any code inside the main() method will be executed. You don't have to understand the keywords before
                     and after main. You will get to know them bit by bit while reading this tutorial.</p>
                 <p>For now, just remember that every Java program has a class name which must match the filename, and
                     that every program must contain the main() method.</p>
                 <h3>System.out.println()</h3>
                 <p>Inside the main() method, we can use the println() method to print a line of text to the screen:</p>
-                <code class="code">public static void main(String[] args) { <br>
-                    System.out.println("Hello World"); <br>
+                <code class="code"><span class="codeKeyword">public static void</span>  main(String[] args) { <br>
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
                   } <br> 
                 </code>
-                <p class="notes"> <span>Note:</span> The curly braces {} marks the beginning and the end of a block of code. <br>
-                   Each code statement must end with a semicolon.
+                <p class="notes"> <span>Note:</span> The curly braces {} marks the beginning and the end of a block of
+                    code. <br>
+                    Each code statement must end with a semicolon.
                 </p>
+            </section>
+            <section class="comments main-section" id="comments">
+                <header>
+                    <h2>COMMENTS</h2>
+                    <hr>
+                </header>
+                <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to
+                    prevent execution when testing alternative code.</p>
+                <h3>Single-line Comments</h3>
+                <p>Single-line comments start with two forward slashes (//).</p>
+                <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                <p>This example uses a single-line comment before a line of code:</p>
+                <code class="code">
+                    <span class="codeComment">
+                        // This is a comment <br>
+                    </span>
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
+                     
+                </code>
+                <p>This example uses a single-line comment at the end of a line of code:</p>
+                <code class="code">
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <span class="codeComment">// This is a comment</span> 
+                </code>
+                <h3>Java Multi-line Comments</h3>
+                <p>Multi-line comments start with /* and ends with */.</p>
+                <p>Any text between /* and */ will be ignored by Java.</p>
+                <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                <code class="code">
+                    <span class="codeComment">
+                        /* The code below will print the words Hello World <br>
+                        to the screen, and it is amazing */ <br>
+                        System.out.println("Hello World"); <br>
+                    </span> 
+                </code>
+                <p class="notes">
+                    <span> Single or multi-line comments?</span> <br>
+                    It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.
+                </p>
+            </section>
+            <section class="variables main-section" id="variables">
+                <header>
+                    <h2>VARIABLES</h2>
+                    <hr>
+                </header>
+                <p>Variables are containers for storing data values.</p>
+                <p>In Java, there are different types of variables, for example:</p>
+                <ul>
+                    <li><strong>String</strong>  - stores text, such as "Hello". String values are surrounded by double quotes</li>
+                    <li><strong>int</strong>  - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                    <li><strong>float</strong>  - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                    <li><strong>char</strong>  - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+                    </li>
+                    <li><strong>boolean</strong>  - stores values with two states: true or false</li>
+                </ul>
+                <h3>Declaring (Creating) Variables</h3>
+                <p>To create a variable, you must specify the type and assign it a value:</p>
+                <code class="code">type variable = value;</code>
+                <p>Where type is one of Java's types (such as <strong>int</strong> or <strong>String</strong>), and variable is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.</p>
+                <p>To create a variable that should store text, look at the following example:</p>
+                <p>Example: Create a variable called myNum of type int and assign it the value 15:</p>
+                <code class="code">
+                    <strong>int</strong> myNum = 15; <br>
+                    System.<span class="codeField">out</span>.println(myNum);
+                </code>
+                <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+                <code class="code">
+                    <strong>int</strong> myNum;
+                    myNum = 15;
+                    System.<span class="codeField">out</span>.println(myNum);
+                </code>
+                <h3>Final Variables</h3>
+                <p>However, you can add the <strong>final</strong> keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "final" or "constant", which means unchangeable and read-only):</p>
+                <code class="code">
+                    <span class="codeKeyword">final</span> <strong>int</strong> myNum = 15; <br>
+                    myNum = 20;  <span class="codeComment">// will generate an error: cannot assign a value to a final variable</span> 
+                </code>
+            
             </section>
 
         </main>

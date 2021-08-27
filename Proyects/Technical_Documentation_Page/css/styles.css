@@ -175,7 +175,18 @@
 .notes span {
   font-weight: bold;
 }
-
+.codeKeyword {
+  color: #0000FF;
+}
+.codeField {
+  color: #00A75A;
+}
+.codeCharacter {
+  color: #CE7B00;
+}
+.codeComment {
+  color: #969696;
+}
 /* Footer */
 .footer {
   grid-area: footer;
