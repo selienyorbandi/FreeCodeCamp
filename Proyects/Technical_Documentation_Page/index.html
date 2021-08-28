@@ -27,9 +27,9 @@
                 <ol class="sectionLinks">
                     <li><a href="#introduction" class="nav-link">Introduction</a></li>
                     <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
-                    <li><a href="#java_sintax">Sintax</a></li>
-                    <li><a href="#comments">Comments</a></li>
-                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#java_sintax" class="nav-link">Java Sintax</a></li>
+                    <li><a href="#comments" class="nav-link">Comments</a></li>
+                    <li><a href="#variables" class="nav-link">Variables</a></li>
                     <li>Data Types</li>
                     <li>Type Casting</li>
                     <li>Operators</li>
@@ -57,9 +57,9 @@
             <ul class="nav-menu">
                 <li><a href="#introduction" class="nav-link">Introduction</a></li>
                 <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
-                <li><a href="#java_sintax">Sintax</a></li>
-                <li><a href="#comments">Comments</a></li>
-                <li><a href="#variables">Variables</a></li>
+                <li><a href="#java_sintax" class="nav-link">Java Sintax</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
                 <li><a href="#">Data Types</a></li>
                 <li><a href="#">Type Casting</a></li>
                 <li><a href="#">Operators</a></li>
@@ -221,22 +221,28 @@
                 <p>When you created this project, you left the Create Main Class checkcbox selected in the New Project
                     wizard. The IDE has therefore created a skeleton class for you. You can add the "Hello World!"
                     message to the skeleton code by replacing the line:</p>
-                <code class="code">// TODO code application logic here</code>
+                <code class="code"><p class="codeComment">// TODO code application logic here</p></code>
                 <p>with the line:</p>
-                <code class="code">System.out.println("Hello World!"); // Display the string.</code>
+                <code
+                    class="code">System.<span class="codeField">out</span>.println("Hello World!"); <span class="codeComment">// Display the string.</span></code>
                 <p>Optionally, you can replace these four lines of generated code:</p>
                 <br>
-                <code class="code">/** <br>
-                    * <br>
-                    * @author <br>
-                    */</code>
+                <code class="code">
+                    <p class="codeComment">/** <br>
+                        * <br>
+                        * @author <br>
+                        */</p>
+                </code>
                 <br>
                 <p>with these lines:</p>
                 <br>
-                <code class="code">/** <br>
+                <code class="code">
+                    <p class="codeComment">
+                        /** <br>
                     * The HelloWorldApp class implements an application that <br>
                     * simply prints "Hello World!" to standard output. <br>
                     */
+                    </p>
                 </code>
                 <br> <br>
                 <p>These four lines are a code comment and do not affect how the program runs. Later sections of this
@@ -266,11 +272,11 @@
                         /** <br>
                         * @param args the command line arguments <br>
                         */ <br>
-                        public static void main(String[] args) { <br>
-                            System.out.println("Hello World!"); // Display the string. <br>
-                        } <br>
+                    </span> 
+                       <span class="codeKeyword">public static void</span> main(String[] args) { <br>
+                            &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World!"</span>); <span class="codeComment">// Display the string.</span><br>
+                            &nbsp;&nbsp;} <br>
                     }<br>
-                   </span>                      
                    </code>
                 <br>
                 <h5>Compile the Source File into a .class File</h5>
@@ -306,9 +312,9 @@
                     print "Hello World" to the screen:</p>
                 <code class="code">
                     <span class="codeKeyword">public class</span>  Main { <br>
-                        <span class="codeKeyword">public static void</span> main(String[] args) { <br>
-                          System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
-                        } <br>
+                        &nbsp;<span class="codeKeyword">public static void</span> main(String[] args) { <br>
+                            &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
+                            &nbsp; } <br>
                       }    <br>
                 </code>
                 <p>Every line of code that runs in Java must be inside a class. In our example, we named the class
@@ -323,7 +329,7 @@
                 <h3>System.out.println()</h3>
                 <p>Inside the main() method, we can use the println() method to print a line of text to the screen:</p>
                 <code class="code"><span class="codeKeyword">public static void</span>  main(String[] args) { <br>
-                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
+                    <span>&nbsp;</span>System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
                   } <br> 
                 </code>
                 <p class="notes"> <span>Note:</span> The curly braces {} marks the beginning and the end of a block of
@@ -361,8 +367,9 @@
                     <span class="codeComment">
                         /* The code below will print the words Hello World <br>
                         to the screen, and it is amazing */ <br>
-                        System.out.println("Hello World"); <br>
                     </span> 
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello World"</span>); <br>
+                    
                 </code>
                 <p class="notes">
                     <span> Single or multi-line comments?</span> <br>
@@ -377,36 +384,288 @@
                 <p>Variables are containers for storing data values.</p>
                 <p>In Java, there are different types of variables, for example:</p>
                 <ul>
-                    <li><strong>String</strong>  - stores text, such as "Hello". String values are surrounded by double quotes</li>
-                    <li><strong>int</strong>  - stores integers (whole numbers), without decimals, such as 123 or -123</li>
-                    <li><strong>float</strong>  - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
-                    <li><strong>char</strong>  - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+                    <li><strong>String</strong> - stores text, such as "Hello". String values are surrounded by double
+                        quotes</li>
+                    <li><strong>int</strong> - stores integers (whole numbers), without decimals, such as 123 or -123
                     </li>
-                    <li><strong>boolean</strong>  - stores values with two states: true or false</li>
+                    <li><strong>float</strong> - stores floating point numbers, with decimals, such as 19.99 or -19.99
+                    </li>
+                    <li><strong>char</strong> - stores single characters, such as 'a' or 'B'. Char values are surrounded
+                        by single quotes
+                    </li>
+                    <li><strong>boolean</strong> - stores values with two states: true or false</li>
                 </ul>
                 <h3>Declaring (Creating) Variables</h3>
                 <p>To create a variable, you must specify the type and assign it a value:</p>
                 <code class="code">type variable = value;</code>
-                <p>Where type is one of Java's types (such as <strong>int</strong> or <strong>String</strong>), and variable is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.</p>
+                <p>Where type is one of Java's types (such as <strong>int</strong> or <strong>String</strong>), and
+                    variable is the name of the variable (such as x or name). The equal sign is used to assign values to
+                    the variable.</p>
                 <p>To create a variable that should store text, look at the following example:</p>
                 <p>Example: Create a variable called myNum of type int and assign it the value 15:</p>
                 <code class="code">
-                    <strong>int</strong> myNum = 15; <br>
+                   <span class="codeIdentifier">int</span> myNum = 15; <br>
                     System.<span class="codeField">out</span>.println(myNum);
                 </code>
                 <p>You can also declare a variable without assigning the value, and assign the value later:</p>
                 <code class="code">
-                    <strong>int</strong> myNum;
-                    myNum = 15;
+                    <span class="codeIdentifier">int</span> myNum; <br>
+                    myNum = 15; <br>
                     System.<span class="codeField">out</span>.println(myNum);
                 </code>
                 <h3>Final Variables</h3>
-                <p>However, you can add the <strong>final</strong> keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "final" or "constant", which means unchangeable and read-only):</p>
+                <p>However, you can add the <strong>final</strong> keyword if you don't want others (or yourself) to
+                    overwrite existing values (this will declare the variable as "final" or "constant", which means
+                    unchangeable and read-only):</p>
                 <code class="code">
-                    <span class="codeKeyword">final</span> <strong>int</strong> myNum = 15; <br>
+                    <span class="codeKeyword">final</span> <span class="codeIdentifier">int</span> myNum = 15; <br>
                     myNum = 20;  <span class="codeComment">// will generate an error: cannot assign a value to a final variable</span> 
                 </code>
-            
+                <h3>Other Types</h3>
+                <p>A demonstration of how to declare variables of other types:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> myNum = 5; <br>
+                    <span class="codeIdentifier">float</span> myFloatNum = 5.99f; <br>
+                    <span class="codeIdentifier">char</span> myLetter = <span class="codeCharacter">'D'</span>; <br>
+                    <span class="codeIdentifier">boolean</span> myBool = true; <br>
+                    <span class="codeIdentifier">String</span> myText = <span class="codeCharacter">"Hello World"</span>; <br>    
+                </code>
+                <h3>Display Variables</h3>
+                <p>The <strong>println()</strong> method is often used to display variables.</p>
+                <p>To combine both text and a variable, use the + character:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span> name = <span class="codeCharacter">"Jhon"</span>; <br>
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Hello"</span> + name);
+                </code>
+                <p>You can also use the + character to add a variable to another variable</p>
+                <h3>Declare Many Variables</h3>
+                <p>To declare more than one variable of the same type, use a comma-separated list:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> x = 5, y = 6, z = 50; <br>
+                    System.<span class="codeField">out</span>.println(x + y + z); <br>
+                </code>
+                <h3>Java Identifiers</h3>
+                <p>All Java <strong>variables</strong> must be <strong>identified</strong> with <strong>unique
+                        names</strong>.</p>
+                <p>These unique names are called identifiers.</p>
+                <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+                <p class="notes">
+                    <span>Note: </span>It is recommended to use descriptive names in order to create understandable and
+                    maintainable code.
+                </p>
+                <p>The general rules for constructing names for variables (unique identifiers) are:</p>
+                <ul>
+                    <li>Names can contain letters, digits, underscores, and dollar signs</li>
+                    <li>Names must begin with a letter</li>
+                    <li>Names should start with a lowercase letter and it cannot contain whitespace</li>
+                    <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+                    <li>Names are case sensitive ("myVar" and "myvar" are different variables)</li>
+                    <li>Reserved words (like Java keywords, such as int or boolean) cannot be used as names</li>
+                </ul>
+            </section>
+            <section class="data-types main-section" id="data_types">
+                <header>
+                    <h2>DATA TYPES</h2>
+                    <hr>
+                </header>
+                <p>As explained in the previous chapter, a variable in Java must be a specified data type:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> myNum = 5;              <span class="codeComment">// Integer (whole number)</span> <br>
+                    <span class="codeIdentifier">float</span> myFloatNum = 5.99f;    <span class="codeComment">// Floating point number</span> <br>
+                    <span class="codeIdentifier">char</span> myLetter = <span class="codeCharacter">'D'</span>; <span class="codeComment">// Character</span> <br>    
+                    <span class="codeIdentifier">boolean</span> myBool = true;      <span class="codeComment">// Boolean</span> <br>
+                    <span class="codeIdentifier">String</span> myText = <span class="codeCharacter">"Hello"</span>;    <span class="codeComment">// String</span> <br>
+                </code>
+                <p>Data types are divided into two groups:</p>
+                <ul>
+                    <li><strong>Primitive data types</strong> - includes <strong>byte, short, int, long, float, double, boolean and
+                            char</strong></li>
+                    <li><strong>Non-primitive data types</strong> - such as <strong>String, Arrays and Classes</strong> (you will learn
+                        more about these in a later chapter)</li>
+                </ul>
+                <h3>Primitive Data Types</h3>
+                <p>A primitive data type specifies the size and type of variable values, and it has no additional
+                    methods.</p>
+                <p>There are eight primitive data types in Java:</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Size</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>byte</td>
+                            <td>1 byte</td>
+                            <td>Stores whole numbers from -128 to 127</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>2 bytes</td>
+                            <td>Stores whole numbers from -32,768 to 32,767</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>4 bytes</td>
+                            <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>8 bytes</td>
+                            <td>Stores whole numbers from -9,223,372,036,854,775,808 to
+                                9,223,372,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>4 bytes</td>
+                            <td>Stores fractional numbers. Sufficient for
+                                storing 6 to 7 decimal digits</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>8 bytes</td>
+                            <td>Stores fractional numbers. Sufficient for
+                                storing 15 decimal digits</td>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>1 bit</td>
+                            <td>Stores true or false values</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>2 bytes</td>
+                            <td>Stores a single character/letter or ASCII values</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Numbers</h3>
+                <p>Primitive number types are divided into two groups:</p>
+                <ul>
+                    <li><strong>Integer types</strong> stores whole numbers, positive or negative (such as 123 or -456),
+                        without decimals. Valid types are byte, short, int and long. Which type you should use, depends
+                        on the numeric value.</li>
+                    <li><strong>Floating point types</strong> represents numbers with a fractional part, containing one
+                        or more decimals. There are two types: float and double.</li>
+                </ul>
+                <p class="notes">
+                    Even though there are many numeric types in Java, the most used for numbers are <strong>int</strong>
+                    (for whole numbers) and <strong>double</strong> (for floating point numbers). However, we will
+                    describe them all as you continue to read.
+                </p>
+                <h4>Integer Types</h4>
+                <h5>Byte</h5>
+                <p>The byte data type can store whole numbers from -128 to 127. This can be used instead of int or other
+                    integer types to save memory when you are certain that the value will be within -128 and 127:</p>
+                <code class="code">
+                    <p>
+                       <span class="codeIdentifier">byte</span> myNum = 100; <br>
+                       System.<span class="codeField">out</span>.println(myNum);
+                    </p>
+                </code>
+                <h5>Short</h5>
+                <p>The short data type can store whole numbers from -32768 to 32767:</p>
+                <code class="code">
+                    <span class="codeIdentifier">short</span> myNum = 5000; <br>
+                    System.<span class="codeField">out</span>.println(myNum);
+                </code>
+                <h5>Int</h5>
+                <p>The int data type can store whole numbers from -2147483648 to 2147483647. In general, and in our
+                    tutorial, the int data type is the preferred data type when we create variables with a numeric
+                    value.</p>
+                <code class="code">
+                    <p>
+                       <span class="codeIdentifier">int</span> myNum = 10000; <br>
+                       System.<span class="codeField">out</span>.println(myNum);
+                    </p>
+                </code>
+                <h5>Long</h5>
+                <p>The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is
+                    used when int is not large enough to store the value. Note that you should end the value with an
+                    "L":</p>
+                <code class="code">
+                    <p>
+                       <span class="codeIdentifier">long</span> myNum = 10000000000L; <br>
+                       System.<span class="codeField">out</span>.println(myNum);
+                    </p>
+                </code>
+                <h4>Floating Point Types</h4>
+                <p>You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14
+                </p>
+                <h5>Float</h5>
+                <p>The float data type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end
+                    the value with an "f":</p>
+                <code class="code">
+                    <p>
+                       <span class="codeIdentifier">float</span> myNum = 10.45f; <br>
+                       System.<span class="codeField">out</span>.println(myNum);
+                    </p>
+                </code>
+                <h5>Double</h5>
+                <p>The double data type can store fractional numbers from 1.7e−308 to 1.7e+308. Note that you should end
+                    the value with a "d":</p>
+                <code class="code">
+                    <p>
+                       <span class="codeIdentifier">double</span> myNum = 10.4565; <br>
+                       System.<span class="codeField">out</span>.println(myNum);
+                    </p>
+                </code>
+                <p class="notes">
+                <span>Use float or double?</span> <br> <br>
+                The <strong>precision</strong> of a floating point value indicates how many digits the value can have after the
+                decimal point. The precision of float is only six or seven decimal digits, while double variables
+                have a precision of about 15 digits. Therefore it is safer to use double for most calculations.
+                </p>
+                <h5>Scientific Numbers</h5>
+                <p>A floating point number can also be a scientific number with an "e" to indicate the power of 10:</p>
+                <code class="code">
+                    <p>
+                        <span class="codeIdentifier">float</span> f1 = 10e4f; <br>
+                        <span class="codeIdentifier">double</span> d1 = 12E4d; <br>
+                        System.<span class="codeField">out</span>.println(f1);
+                        System.<span class="codeField">out</span>.println(d1);
+                     </p>    
+                </code>
+                <h4>Booleans</h4>
+                <p>A boolean data type is declared with the boolean keyword and can only take the values true or false:</p>
+                <code class="code">
+                    <p>
+                        <span class="codeIdentifier">boolean</span> isJavaFun = true; <br>
+                        <span class="codeIdentifier">boolean</span> isFishTasty = false <br>
+                        System.<span class="codeField">out</span>.println(isJavaFun);
+                        System.<span class="codeField">out</span>.println(isFishTasty);
+                     </p>    
+                </code>
+                <p>Boolean values are mostly used for conditional testing, which you will learn more about in a later chapter.</p>
+                <h4>Characters</h4>
+                <p>The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':</p>
+                <code class="code">
+                    <span class="codeIdentifier">char</span> myGrade = <span class="codeCharacter">'B'</span>; <br>
+                    System.<span class="codeField">out</span>.println(myGrade);
+                </code>
+                <p>Alternatively, you can use ASCII values to display certain characters:</p>
+                <code class="code">
+                    <span class="codeIdentifier">char</span> a = 65, b = 66, c = 67; <br>
+                    System.<span class="codeField">out</span>.println(a); <br>
+                    System.<span class="codeField">out</span>.println(b); <br>
+                    System.<span class="codeField">out</span>.println(c); <br>
+                </code>
+                <h4>Strings</h4>
+                <p>The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span> greeting = <span class="codeCharacter">"Hello World"</span>; <br>
+                    System.<span class="codeField">out</span>.println(greeting);
+                </code>
+                <h3>Non-Primitive Data Types</h3>
+                <p>Non-primitive data types are called reference types because they refer to objects.</p>
+                <p>The main difference between primitive and non-primitive data types are:</p>
+                <ul>
+                    <li>Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).</li>
+                    <li>Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.</li>
+                    <li>A primitive type has always a value, while non-primitive types can be null.</li>
+                    <li>A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.</li>
+                    <li>The size of a primitive type depends on the data type, while non-primitive types have all the same size.</li>
+                </ul>
             </section>
 
         </main>

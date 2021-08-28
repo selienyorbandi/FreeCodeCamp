@@ -166,12 +166,14 @@
 .main p {
   padding: 0.5rem 0;
 }
+/* Notes */
 .main .notes {
   background: #ffffcc;
   padding: 1.3rem;
   margin: 1rem 0;
   width: fit-content;
 }
+/* Code Colors */
 .notes span {
   font-weight: bold;
 }
@@ -187,6 +189,37 @@
 .codeComment {
   color: #969696;
 }
+.codeIdentifier {
+  color: #0080a7;
+}
+/* Tables */
+.main .table {
+  border: solid rgb(167, 167, 167) 1px;
+  margin: .7rem 0;
+}
+.main .table tr:nth-child(1){
+  background: #e2e2e2;
+}
+.main .table tr:nth-child(3){
+  background: #e2e2e2;
+}
+.main .table tr:nth-child(5){
+  background: #e2e2e2;
+}
+.main .table tr:nth-child(7){
+  background: #e2e2e2;
+}
+.main .table tr:nth-child(9){
+  background: #e2e2e2;
+}
+.main .table tr:nth-child(11){
+  background: #e2e2e2;
+}
+.main .table th,
+.main .table td {
+  padding: .5rem;
+}
+
 /* Footer */
 .footer {
   grid-area: footer;
