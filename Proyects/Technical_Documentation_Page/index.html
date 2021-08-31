@@ -36,11 +36,11 @@
                     <li><a href="#strings">Strings</a></li>
                     <li><a href="#math">Math</a></li>
                     <li><a href="#booleans">Booleans</a></li>
-                    <li>If Else</li>
-                    <li>Switch</li>
-                    <li>While</li>
-                    <li>For</li>
-                    <li>Break /Continue</li>
+                    <li><a href="#if_else">If Else</a></li>
+                    <li><a href="#switch">Switch</a></li>
+                    <li><a href="#while_loop">While</a></li>
+                    <li><a href="#for_loop">For</a></li>
+                    <li><a href="#break_continue">Break /Continue</a></li>
                     <li>Arrays</li>
                 </ol>
             </nav>
@@ -66,11 +66,11 @@
                 <li><a href="#strings">Strings</a></li>
                 <li><a href="#math">Math</a></li>
                 <li><a href="#booleans">Booleans</a></li>
-                <li><a href="#">If Else</a></li>
-                <li><a href="#">Switch</a></li>
-                <li><a href="#">While</a></li>
-                <li><a href="#">For</a></li>
-                <li><a href="#">Break /Continue</a></li>
+                <li><a href="#if_else">If Else</a></li>
+                <li><a href="#switch">Switch</a></li>
+                <li><a href="#while_loop">While</a></li>
+                <li><a href="#for_loop">For</a></li>
+                <li><a href="#break_continue">Break /Continue</a></li>
                 <li><a href="#">Arrays</a></li>
             </ul>
         </nav>
@@ -1147,6 +1147,324 @@
                     The Boolean value of an expression is the basis for all Java comparisons and conditions. <br>
                     You will learn more about conditions in the next chapter.
                 </p>
+            </section>
+            <section class="if-else" id="if_else">
+                <header>
+                    <h2>If...Else</h2>
+                    <hr>
+                </header>
+                <h3>Java Conditions and If Statements</h3>
+                <p>Java supports the usual logical conditions from mathematics:</p>
+                <ul>
+                    <li>Less than: a < b</li>
+                    <li>Less than or equal to: a <= b</li>
+                    <li>Greater than: a > b</li>
+                    <li>Greater than or equal to: a >= b</li>
+                    <li>Equal to a == b</li>
+                    <li>Not Equal to: a != b</li>
+                </ul>
+                <p>You can use these conditions to perform different actions for different decisions.</p>
+                <p>Java has the following conditional statements:</p>
+                <ul>
+                    <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+                    <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+                    <li>Use else if to specify a new condition to test, if the first condition is false</li>
+                    <li>Use switch to specify many alternative blocks of code to be executed</li>
+                </ul>
+                <h3>The if Statement</h3>
+                <p>Use the if statement to specify a block of Java code to be executed if a condition is true.</p>
+                <code class="code">
+                    <span class="codeKeyword">if</span> (condition) { <br> 
+                    <span class="codeComment">// block of code to be executed if the condition is true</span> <br>
+                    }
+                </code>
+                <p class="notes">
+                    Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+                </p>
+                <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition is
+                    true, print some text:</p>
+                <code class="code">
+                    <span class="codeKeyword">if</span> (20 > 18) { <br> 
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"20 is greater than 18"</span>); <br>
+                    }
+                </code>
+                <p>We can also test variables:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> x = 20; <br>
+                    <span class="codeIdentifier">int</span> y = 18; <br>
+                    <span class="codeKeyword">if</span>(x > y) { <br>
+                    System.<span class="codeField">out</span>.println(<span class="codeCharacter">"x is greater than y"</span>); <br>
+                    }
+                </code>
+                <h3>The else Statement</h3>
+                <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                <code class="code">
+                    <span class="codeKeyword">if</span> (condition) { <br> 
+                    <span class="codeComment">// block of code to be executed if the condition is true</span> <br>
+                    } <span class="codeKeyword">else</span> { <br>
+                    <span class="codeComment">// block of code to be executed if the condition is false</span> <br>
+                    }
+                </code>
+                <h3>The else if Statement</h3>
+                <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+                <code class="code">
+                    <span class="codeKeyword">if</span> (condition) { <br> 
+                    <span class="codeComment">// block of code to be executed if the condition is true</span> <br>
+                    } <span class="codeKeyword">else if</span> (condition2) { <br> 
+                    <span class="codeComment">// block of code to be executed if the condition1 is false and condition2 is true</span> <br>
+                    } <span class="codeKeyword">else</span> { <br>
+                    <span class="codeComment">// block of code to be executed if the condition1 is false and condition2 is false</span> <br>
+                    }
+                </code>
+                <p>Example</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> time = 22; <br>
+                    <span class="codeKeyword">if</span> (time < 10) {  <br> 
+                        &nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Good morning."</span>); <br>
+                    }<span class="codeKeyword">else if</span> (time < 20) { <br> 
+                        &nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Good day."</span>); <br>
+                    } <span class="codeKeyword">else</span> { <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Good evening."</span>); <br>
+                    } <br>
+                    <span class="codeComment">// Outputs "Good evening."</span>
+                </code>
+                <h3>Short Hand If...Else (Ternary Operator)</h3>
+                <p>There is also a short-hand if else, which is known as the ternary operator because it consists of
+                    three operands. It can be used to replace multiple lines of code with a single line. It is often
+                    used to replace simple if else statements:</p>
+                <code class="code">
+                    variable = (condition) ? expressionTrue :  expressionFalse;
+                </code>
+                <p>Instead of writing:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> time = 20; <br>
+                    <span class="codeKeyword">if</span>(time < 18) { <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Good day."</span>); <br>
+                    } <span class="codeKeyword">else </span>{ <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Good evening."</span>); <br>
+                    }
+                </code>
+                <p>You can simply write:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> time = 20; <br>
+                    <span class="codeIdentifier">String</span> result = (time < 18) ? <span class="codeCharacter">"Good day."</span> : <span class="codeCharacter">"Good evening."</span>; <br>
+                    System.<span class="codeField">out</span>.println(result); <br>
+                </code>
+            </section>
+            <section class="switch" id="switch">
+                <header>
+                    <h2>Switch</h2>
+                    <hr>
+                </header>
+                <h3>Java Switch Statements</h3>
+                <p>Use the switch statement to select one of many code blocks to be executed.</p>
+                <code class="code">
+                   <span class="codeKeyword">switch</span>(expression) { <br>
+                        &nbsp;case x: <br>
+                        &nbsp;&nbsp;<span class="codeComment">// code block</span>  <br>
+                        &nbsp;&nbsp;break; <br>
+                        &nbsp;case y: <br>
+                        &nbsp;&nbsp;<span class="codeComment">// code block</span>  <br>
+                        &nbsp;&nbsp;break; <br>
+                        &nbsp;default: <br>
+                        &nbsp;&nbsp;<span class="codeComment">// code block</span>  <br>
+                      }
+                </code>
+                <p>This is how it works:</p>
+                <ul>
+                    <li>The switch expression is evaluated once.</li>
+                    <li>The value of the expression is compared with the values of each case.</li>
+                    <li>If there is a match, the associated block of code is executed.</li>
+                    <li>The break and default keywords are optional, and will be described later in this chapter</li>
+                </ul>
+                <p>The example below uses the weekday number to calculate the weekday name:</p>
+                <code class="code">
+                   <span class="codeIdentifier">int</span>day = 4; <br>
+                   <span class="codeKeyword">switch</span>(day) { <br>
+                    &nbsp;case 1: <br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Monday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 2: <br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Tuesday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 3: <br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Wednesday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 4:<br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Thursday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 5:<br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Friday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 6:<br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Saturday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    &nbsp;case 7:<br>
+                    &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Sunday"</span>); <br>
+                    &nbsp;&nbsp;break; <br>
+                    } <br>
+                    <span class="codeComment">// Outputs "Thursday" (day 4)</span> <br>
+                </code>
+                <h3>The break Keyword</h3>
+                <p>When Java reaches a break keyword, it breaks out of the switch block.</p>
+                <p>This will stop the execution of more code and case testing inside the block.</p>
+                <p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+                </p>
+                <p class="notes">
+                    A break can save a lot of execution time because it "ignores" the execution of all the rest of the
+                    code in the switch block.
+                </p>
+                <h3>The default Keyword</h3>
+                <p>The default keyword specifies some code to run if there is no case match:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span>day = 4; <br>
+                    <span class="codeKeyword">switch</span>(day) { <br>
+                        &nbsp;case 6:<br>
+                        &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Saturday"</span>); <br>
+                        &nbsp;&nbsp;break; <br>
+                        &nbsp;case 7:<br>
+                        &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Sunday"</span>); <br>
+                        &nbsp;&nbsp;break; <br>
+                        &nbsp;default: <br>
+                        &nbsp;&nbsp;System.<span class="codeField">out</span>.println(<span class="codeCharacter">"Looking forward to the Weekend"</span>); <br>
+                    } <br>
+                        <span class="codeComment">// Outputs "Looking forward to the Weekend"</span> <br>
+                </code>
+                <p class="notes">
+                    Note that if the default statement is used as the last statement in a switch block, it does not need
+                    a break.
+                </p>
+            </section>
+            <section class="while" id="while">
+                <header>
+                    <h2>While Loop</h2>
+                    <hr>
+                </header>
+                <h3>Loops</h3>
+                <p>Loops can execute a block of code as long as a specified condition is reached.</p>
+                <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+                <h3>Java While Loop</h3>
+                <p>The while loop loops through a block of code as long as a specified condition is true:</p>
+                <code class="code">
+                   <span class="codeKeyword">while</span> (condition) { <br>
+                    &nbsp;<span class="codeComment">// code block to be executed</span> <br>
+                      }
+                </code>
+                <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i)
+                    is less than 5:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> i = 0; <br>
+                    <span class="codeKeyword">while</span> (i < 5) { <br>
+                     &nbsp;System.<span class="codeField">out</span>.println(i);  <br>
+                     &nbsp;i++; <br>
+                    }
+                 </code>
+                <p class="notes">
+                    <span>Note: </span> Do not forget to increase the variable used in the condition, otherwise the loop
+                    will never end!
+                </p>
+                <h3>The Do/While Loop</h3>
+                <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before
+                    checking if the condition is true, then it will repeat the loop as long as the condition is true.
+                </p>
+                <code class="code">
+                    <span class="codeKeyword">do</span> { <br>
+                     &nbsp;<span class="codeComment">// code block to be executed</span> <br>
+                    } <br>
+                    <span class="codeKeyword">while</span> (condition);
+                 </code>
+                <p>The example below uses a do/while loop. The loop will always be executed at least once, even if the
+                    condition is false, because the code block is executed before the condition is tested:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> i = 0; <br>
+                    <span class="codeKeyword">do</span> { <br>
+                     &nbsp;System.<span class="codeField">out</span>.println(i);  <br>
+                     &nbsp;i++; <br>
+                    } <br>
+                    <span class="codeKeyword">while</span> (i < 5);
+                 </code>
+                <p class="notes">Do not forget to increase the variable used in the condition, otherwise the loop will
+                    never end!</p>
+            </section>
+            <section class="for" id="for_loop">
+                <header>
+                    <h2>For Loop</h2>
+                    <hr>
+                </header>
+                <p>When you know exactly how many times you want to loop through a block of code, use the for loop
+                    instead of a while loop:</p>
+                <code class="code">
+                   <span class="codeKeyword">for</span> (statement 1; statement 2; statement 3) { <br>
+                    &nbsp;<span class="codeComment">// code block to be executed</span> <br>
+                      }
+                </code>
+                <p>Statement 1 is executed (one time) before the execution of the code block.</p>
+                <p>Statement 2 defines the condition for executing the code block.</p>
+                <p>Statement 3 is executed (every time) after the code block has been executed.</p>
+                <p>The example below will print the numbers 0 to 4:</p>
+                <code class="code">
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> i = 0; i < 5; i++) { <br>
+                     &nbsp;System.<span class="codeField">out</span>.println(i); <br>
+                       }
+                 </code>
+                <h3>For-Each Loop</h3>
+                <p>There is also a "for-each" loop, which is used exclusively to loop through elements in an array:</p>
+                <code class="code">
+                    <span class="codeKeyword">for</span> (type variableName : arrayName) { <br>
+                        &nbsp;<span class="codeComment">// code block to be executed</span> <br>
+                       }
+                 </code>
+                <p>The following example outputs all elements in the cars array, using a "for-each" loop:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"BMW"</span>,<span class="codeCharacter">"Ford"</span>,<span class="codeCharacter">"Mazda"</span>}; <br>
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">String</span> i : cars) { <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(i); <br>
+                       }
+                    </code>
+                <p class="notes">
+                   <span>Note: </span> Don't worry if you don't understand the example above. You will learn more about Arrays in the Java Arrays chapter.
+                </p>
+            </section>
+            <section class="break-continue" id="break_continue">
+                <header>
+                    <h2>Break / Continue</h2>
+                    <hr>
+                </header>
+                <p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement</p>
+                <p>The break statement can also be used to jump out of a loop.</p>
+                <p>This example stops the loop when i is equal to 4:</p>
+                <code class="code">
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> i = 0; i < 10; i++) { <br>
+                        &nbsp; <span class="codeKeyword">if</span> (i == 4) { <br>
+                            &nbsp; &nbsp; break; <br>
+                            &nbsp;} <br>
+                            &nbsp; System.<span class="codeField">out</span>.println(i); <br>
+                    }
+                </code>
+                <h3>Java Continue</h3>
+                <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+                <p>This example skips the value of 4:</p>
+                <code class="code">
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> i = 0; i < 10; i++) { <br>
+                        &nbsp; <span class="codeKeyword">if</span> (i == 4) { <br>
+                            &nbsp; &nbsp; continue; <br>
+                            &nbsp;} <br>
+                            &nbsp; System.<span class="codeField">out</span>.println(i); <br>
+                    }
+                </code>
+                <h3>Break and Continue in While Loop</h3>
+                <p>You can also use break and continue in while loops:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span> i = 0; <br>
+                    <span class="codeKeyword">while</span> (i < 10) { <br>
+                        &nbsp; System.<span class="codeField">out</span>.println(i); <br>
+                        &nbsp; i++; <br>
+                        &nbsp; <span class="codeKeyword">if</span> (i == 4) { <br>
+                            &nbsp; &nbsp;break; <br>
+                            &nbsp; } <br>
+                    }
+                </code>
+            
             </section>
         </main>
         <footer class="footer">
