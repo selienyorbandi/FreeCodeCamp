@@ -1,0 +1,313 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Yaldevi Colombo Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Yaldevi Colombo Regular"),
+    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Regular.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Yaldevi Colombo Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Yaldevi Colombo Bold"),
+    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Bold.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Yaldevi Colombo Medium Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Yaldevi Colombo Medium Regular"),
+    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Medium.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Yaldevi Colombo SemiBold Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Yaldevi Colombo SemiBold Regular"),
+    url("YaldeviColombo-SemiBold.woff") format("woff");
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #c4b795;
+  margin-top: 10vh;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navDesktop {
+  display: none;
+}
+
+.mobileMenu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  background: #d9d9d7;
+  box-shadow: inset 0px -1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.mobileMenu img {
+  height: 45%;
+  padding: 0 1rem;
+}
+
+.bar-btn {
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 10vh;
+  background-color: #d9d9d7;
+  text-align: center;
+  transition: all 0.5s;
+  padding: 0;
+  z-index: 999;
+  overflow: auto;
+  font-family: "Yaldevi Colombo Bold";
+  letter-spacing: 0.2rem;
+}
+
+.nav-menu ul {
+  padding: 0;
+}
+
+.nav-menu li {
+  display: none;
+  line-height: 2rem;
+  margin: 2rem 0;
+  transition: all 0.5s;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-menu li a:active,
+.nav-menu li a:hover {
+  border-bottom: #000 solid 0.2rem;
+  transition: all 0.2s;
+}
+
+.nav-menu .navCallToAction a {
+  color: #ff9000;
+  background: #000;
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.6rem;
+}
+
+.navCallToAction a:hover {
+  background: #ff9000;
+  color: #000;
+  border: #000 solid 0.05rem;
+  transition: all 0.3s ease-in;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-menu {
+  height: 30vh;
+  width: 100%;
+  position: absolute;
+  z-index: 99999;
+}
+
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+/* Header */
+.header {
+  height: 90vh;
+  width: 100vw;
+  font-family: "Yaldevi Colombo Bold";
+  letter-spacing: 0.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .productName {
+  width: 100%;
+  background: #242223;
+  color: #ff9000;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.6);
+  font-size: calc(1rem + 1vw);
+  margin: 0.7rem 0;
+  padding: 1rem;
+}
+
+.productDescription {
+  font-size: calc(1rem + 2.4vw);
+  font-family: "Yaldevi Colombo Medium Regular";
+  padding: 0 1rem 0.7rem;
+}
+
+.mainImg {
+  width: calc(1rem + 45vh);
+  height: auto;
+  object-fit: cover;
+}
+
+/* =============MEDIA QUERIES============= */
+
+/* ================================================================= */
+/* Tablets */
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .productName {
+    grid-column: span 2;
+  }
+
+  .productDescription {
+    text-align: left;
+    padding: calc(0.5rem + 1vw);
+  }
+
+  .mainImg {
+    width: calc(1rem + 60vh);
+  }
+}
+/* ================================================================= */
+/* Notebooks and Desktop*/
+
+@media screen and (min-width: 1023px) {
+  
+  /* Navigation Bar */
+  .navDesktop {
+    width: 100%;
+    height: 10vh;
+    background: #d9d9d7;
+    box-shadow: inset 0px -1px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .navDesktop .brand {
+    width: 20rem;
+    height: auto;
+    object-fit: scale-down;
+    align-self: center;
+    padding-left: 2rem;
+  }
+
+  .navDesktop .navLinks {
+    display: flex;
+    list-style: none;
+    font-family: "Yaldevi Colombo Bold", "Times New Roman", Times, serif;
+    display: flex;
+    align-items: center;
+  }
+
+  .navDesktop .navLinks a {
+    color: #000;
+    margin: 1rem;
+    font-size: calc(1rem + 1vw);
+    text-decoration: none;
+  }
+
+  .navDesktop .navLinks a:hover {
+    width: 100%;
+    border-top: #000 solid 0.15rem;
+  }
+
+  .navDesktop .navLinks .navCallToAction a {
+    background: #000;
+    color: #ff9000;
+    padding: 0.25rem 1rem;
+    border-radius: 0.2rem;
+  }
+
+  .navDesktop .navLinks .navCallToAction a:hover {
+    background: #ff9000;
+    color: #000;
+    border: #000 solid 0.05rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+/* ================================================================= */
+/* Desktop */
+
+@media screen and (min-width: 1366px) {
+  
+  /* Header */
+  .productName {
+    height: 30vh;
+    position: relative;
+    z-index: 9;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .productName h1 {
+    margin-left: 1rem;
+  }
+
+  .productDescription {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    margin-left: 1rem;
+    align-self: flex-start;
+  }
+
+  .mainImg {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    position: relative;
+    z-index: 19;
+    width: calc(1rem + 50vw);
+    height: 100vh;
+    object-position: left;
+  }
+}
