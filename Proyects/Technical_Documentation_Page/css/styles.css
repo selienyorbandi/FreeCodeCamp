@@ -234,6 +234,11 @@
   text-align: center;
 }
 
+.footer a,
+.footer a:visited {
+  color: #fff;
+}
+
 /* ============================================== */
 /* MEDIA QUERIES */
 

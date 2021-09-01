@@ -41,7 +41,7 @@
                     <li><a href="#while_loop">While</a></li>
                     <li><a href="#for_loop">For</a></li>
                     <li><a href="#break_continue">Break /Continue</a></li>
-                    <li>Arrays</li>
+                    <li><a href="#arrays">Arrays</a></li>
                 </ol>
             </nav>
         </div>
@@ -71,7 +71,7 @@
                 <li><a href="#while_loop">While</a></li>
                 <li><a href="#for_loop">For</a></li>
                 <li><a href="#break_continue">Break /Continue</a></li>
-                <li><a href="#">Arrays</a></li>
+                <li><a href="#arrays">Arrays</a></li>
             </ul>
         </nav>
 
@@ -1464,12 +1464,106 @@
                             &nbsp; } <br>
                     }
                 </code>
-            
+            </section>
+            <section class="arrays" id="arrays">
+                <header>
+                    <h2>Arrays</h2>
+                    <hr>
+                </header>
+                <p>Arrays are used to store multiple values in a single variable, instead of declaring separate
+                    variables for each value.</p>
+                <p>To declare an array, define the variable type with square brackets:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars;
+                </code>
+                <p>We have now declared a variable that holds an array of strings. To insert values to it, we can use an
+                    array literal - place the values in a comma-separated list, inside curly braces:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"Bmw"</span>, <span class="codeCharacter">"Ford"</span>, <span class="codeCharacter">"Renault"</span>};
+                </code>
+                <p>To create an array of integers, you could write:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span>[] myNum = {10, 20, 30, 40}; 
+                </code>
+                <h3>Access the Elements of an Array</h3>
+                <p>You access an array element by referring to the index number.</p>
+                <p>This statement accesses the value of the first element in cars:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"Bmw"</span>, <span class="codeCharacter">"Ford"</span>, <span class="codeCharacter">"Renault"</span>}; <br>
+                    System.<span class="codeField">out</span>.println(cars[0]); <br>
+                    <span class="codeComment">// Outputs Volvo</span>
+                </code>
+                <p class="notes">
+                    <span>Note:</span> Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
+                </p>
+                <h3>Change an Array Element</h3>
+                <p>To change the value of a specific element, refer to the index number:</p>
+                <code class="code">
+                    cars[0] = {<span class="codeCharacter">"Opel"</span>;
+                </code>
+                <h3>Array Length</h3>
+                <p>To find out how many elements an array has, use the length property:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"Bmw"</span>, <span class="codeCharacter">"Ford"</span>, <span class="codeCharacter">"Renault"</span>}; <br>
+                    System.<span class="codeField">out</span>.println(cars.length); <br>
+                    <span class="codeComment">// Outputs 4</span>
+                </code>
+                <h3>Loop Through an Array</h3>
+                <p>You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.</p>
+                <p>The following example outputs all elements in the cars array:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"Bmw"</span>, <span class="codeCharacter">"Ford"</span>, <span class="codeCharacter">"Renault"</span>}; <br>
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> i = 0; i < cars.length; i++) { <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(cars.length); <br>
+                    }
+                </code>
+                <h3>Loop Through an Array with For-Each</h3>
+                <p>There is also a "for-each" loop, which is used exclusively to loop through elements in arrays:</p>
+                <code class="code">
+                    <span class="codeKeyword">for</span> (type variable : arrayname) { <br>
+                        &nbsp; ... <br>
+                    }
+                </code>
+                <p>The following example outputs all elements in the cars array, using a "for-each" loop:</p>
+                <code class="code">
+                    <span class="codeIdentifier">String</span>[] cars = {<span class="codeCharacter">"Volvo"</span>,<span class="codeCharacter">"Bmw"</span>, <span class="codeCharacter">"Ford"</span>, <span class="codeCharacter">"Renault"</span>}; <br>
+                    <span class="codeKeyword">for</span> (<span class="codeIdentifier">String</span> i : cars) { <br>
+                        &nbsp;System.<span class="codeField">out</span>.println(i); <br>
+                    }
+                </code>
+                <p>The example above can be read like this: for each String element (called i - as in index) in cars, print out the value of i.</p>
+                <p>If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.</p>
+                <h3>Multidimensional Arrays</h3>
+                <p>A multidimensional array is an array containing one or more arrays.</p>
+                <p>To create a two-dimensional array, add each array within its own set of curly braces:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span>[][] myNumbers = { {1,2,3,4} {5,6,7} };
+                </code>
+                <p>myNumbers is now an array with two arrays as its elements.</p>
+                <p>To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:</p>
+                <code class="code">
+                    <span class="codeIdentifier">int</span>[][] myNumbers = { {1,2,3,4} {5,6,7} }; <br>
+                    <span class="codeIdentifier">int</span>x = myNumbers[1][2]; <br>
+                    &nbsp;System.<span class="codeField">out</span>.println(x); <span class="codeComment">// Outputs 7</span>
+                </code>
+                <p>We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+                <code class="code">
+                    <span class="codeKeyword">public class </span>Main { <br>
+                        &nbsp; <span class="codeKeyword">public static void </span>main(String[] args) { <br>
+                        &nbsp;&nbsp;&nbsp; <span class="codeIdentifier">int</span>[][] myNumbers = { {1,2,3,4} {5,6,7} }; <br> 
+                        &nbsp;&nbsp;&nbsp; <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> i = 0; i < myNumbers.length; i++) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; <span class="codeKeyword">for</span> (<span class="codeIdentifier">int</span> j = 0; j < myNumbers[i].length; j++) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.<span class="codeField">out</span>.println(cars.length); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                            &nbsp;&nbsp;&nbsp; } <br>    
+                            &nbsp; } <br>
+                    }   <br>     
+                </code>
             </section>
         </main>
         <footer class="footer">
             <div class="my-profile">
-                <p>Website made by Selien Yorbandi</p>
+                <p>Website made by Selien Yorbandi. <br> This is a compilation of <a href="https://www.w3schools.com/java" target="blank">W3 School</a> and <a href="https://docs.oracle.com/en/java/javase/16/" target="blank">Java Docs</a> from Oracle </p>
                 <div class="linksFooter">
                     <a href="https://github.com/selienyorbandi" target="blank"><img src="img/logotipo-de-github.png"
                             alt="Github profile of Selien Yorbandi" width="25px"></a>
