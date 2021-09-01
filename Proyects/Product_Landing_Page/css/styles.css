@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Regular"),
-    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Regular.woff)
+    url(../fonts/YaldeviColombo-Regular.woff)
       format("woff");
 }
 
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Bold"),
-    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Bold.woff)
+    url(../fonts/YaldeviColombo-Bold.woff)
       format("woff");
 }
 
@@ -28,7 +28,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Medium Regular"),
-    url(/Proyects/Product_Landing_Page/fonts/YaldeviColombo-Medium.woff)
+    url(../fonts/YaldeviColombo-Medium.woff)
       format("woff");
 }
 
@@ -37,7 +37,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo SemiBold Regular"),
-    url("YaldeviColombo-SemiBold.woff") format("woff");
+    url(../fonts/YaldeviColombo-SemiBold.woff) format("woff");
 }
 .wrapper {
   width: 100%;
