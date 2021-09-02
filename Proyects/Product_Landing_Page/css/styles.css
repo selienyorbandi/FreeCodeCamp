@@ -10,8 +10,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Regular"),
-    url(../fonts/YaldeviColombo-Regular.woff)
-      format("woff");
+    url(../fonts/YaldeviColombo-Regular.woff) format("woff");
 }
 
 @font-face {
@@ -19,8 +18,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Bold"),
-    url(../fonts/YaldeviColombo-Bold.woff)
-      format("woff");
+    url(../fonts/YaldeviColombo-Bold.woff) format("woff");
 }
 
 @font-face {
@@ -28,8 +26,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Yaldevi Colombo Medium Regular"),
-    url(../fonts/YaldeviColombo-Medium.woff)
-      format("woff");
+    url(../fonts/YaldeviColombo-Medium.woff) format("woff");
 }
 
 @font-face {
@@ -62,6 +59,7 @@
   align-items: center;
   background: #d9d9d7;
   box-shadow: inset 0px -1px 8px rgba(0, 0, 0, 0.25);
+  z-index: 999999;
 }
 
 .mobileMenu img {
@@ -85,7 +83,7 @@
   text-align: center;
   transition: all 0.5s;
   padding: 0;
-  z-index: 999;
+  z-index: 9999;
   overflow: auto;
   font-family: "Yaldevi Colombo Bold";
   letter-spacing: 0.2rem;
@@ -135,7 +133,7 @@
 }
 
 #check:checked ~ .nav-menu {
-  height: 30vh;
+  height: 100vh;
   width: 100%;
   position: absolute;
   z-index: 99999;
@@ -157,6 +155,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .header .productName {
@@ -181,12 +180,63 @@
   object-fit: cover;
 }
 
+/* First Section - Description of the product */
+.firstDescription {
+  background: #706e71;
+  color: #fff;
+  text-align: center;
+}
+
+.speechBubble {
+  background: #232224;
+  font-family: "Yaldevi Colombo Bold", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.speechBubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 45px 30px 0 30px;
+  border-color: #232224 transparent transparent transparent;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+}
+
+.firstDescription > p {
+  font-family: "Yaldevi Colombo Regular", sans-serif;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.firstDescription-img {
+  max-width: 550px;
+  min-width: 320px;
+  width: 50%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.firstDescription-img img {
+  width: 100%;
+  object-fit: contain;
+  border: 0.3rem solid #232224;
+}
+
 /* =============MEDIA QUERIES============= */
 
 /* ================================================================= */
 /* Tablets */
 
 @media screen and (min-width: 768px) {
+  /* Header */
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -207,12 +257,16 @@
   .mainImg {
     width: calc(1rem + 60vh);
   }
+
+  /* First Section - Description of the product */
+  .firstDescription-text {
+    padding-bottom: 3rem;
+  }
 }
 /* ================================================================= */
 /* Notebooks and Desktop*/
 
 @media screen and (min-width: 1023px) {
-  
   /* Navigation Bar */
   .navDesktop {
     width: 100%;
@@ -276,8 +330,7 @@
 /* ================================================================= */
 /* Desktop */
 
-@media screen and (min-width: 1366px) {
-  
+@media screen and (min-width: 1200px) {
   /* Header */
   .productName {
     height: 30vh;
@@ -309,5 +362,44 @@
     width: calc(1rem + 50vw);
     height: 100vh;
     object-position: left;
+  }
+
+  /* First Section - Description of the product */
+  .firstDescription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    justify-items: center;
+  }
+
+  .speechBubble {
+    font-size: calc(2rem + 1vw);
+    padding: 2.2rem;
+    margin: 2.2rem 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .speechBubble::after {
+    border-width: 65px 50px 0 50px;
+  }
+
+  .firstDescription > p {
+    font-size: calc(2.2rem + 1vw);
+    text-align: left;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    line-height: 4.2rem;
+    margin: 0 2.6rem;
+  }
+
+  .firstDescription-img {
+    width: 100%;
+    grid-column: 2 / 3;
+    align-self: center;
+    padding-bottom: 2.2rem;
+  }
+  .firstDescription-img img {
+    border: 0.5rem solid #232224;
   }
 }
