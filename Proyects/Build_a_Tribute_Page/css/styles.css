@@ -162,7 +162,8 @@ html {
 
 /* ========================================== */
 /* Discografia */
-.discografiaContent, .albumes {
+.discografiaContent,
+.albumes {
   width: 100%;
   max-width: 1440px;
   margin: auto;
@@ -173,7 +174,7 @@ html {
 .discografiaContent h2 {
   font-size: calc(1rem + 4vw);
   font-weight: 700;
-  padding-bottom: .4rem;
+  padding-bottom: 0.4rem;
 }
 
 .bandaTitle {
@@ -203,8 +204,7 @@ html {
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  border-radius: .3rem;
-  
+  border-radius: 0.3rem;
 }
 
 .tituloLargo {
@@ -220,8 +220,8 @@ html {
 .albumImg {
   width: 75%;
   height: 75%;
-  margin: .6rem 0;
-  border-radius: .3rem;
+  margin: 0.6rem 0;
+  border-radius: 0.3rem;
   overflow: hidden;
 }
 .albumImg > img {
@@ -247,86 +247,114 @@ html {
   background: #45107c;
 }
 #signos1986 {
-  background: #70650B;
+  background: #70650b;
 }
 #ruidoBlanco1987 {
-  background: #DBCDB3;
+  background: #dbcdb3;
 }
 #dobleVida1988 {
-  background: #ABA59D;
+  background: #aba59d;
 }
 #languis1989 {
-  background: #053C8E;
+  background: #053c8e;
 }
 #cancionAnimal1990 {
-  background: #E97218;
+  background: #e97218;
 }
 #rexMix1991 {
-  background: #00EACF;
+  background: #00eacf;
 }
 #dynamo1992 {
-  background: #DE562C;
+  background: #de562c;
 }
 #zonaDePromesas1993 {
-  background: #C3E923;
+  background: #c3e923;
 }
 #sueñoStereo1995 {
-  background: #514F53;
+  background: #514f53;
 }
 #comfortMusicaParaVolar1996 {
-  background: #A3C1CB;
+  background: #a3c1cb;
 }
-#elUltimoConciertoA1997{
+#elUltimoConciertoA1997 {
   background: #d46a00;
 }
 #elUltimoConciertoB1997 {
   background: #03c8bb;
 }
 #giraMeVerasVolver1_2008 {
-  background: #0A1025;
+  background: #0a1025;
 }
 #giraMeVerasVolver2_2008 {
-  background: #A14975;
+  background: #a14975;
 }
 #amorAmarillo1993 {
   background: #ffe62c;
 }
 #bocanada1999 {
-  background: #1F589D;
+  background: #1f589d;
 }
-#episodiosSinfonicos2001{
+#episodiosSinfonicos2001 {
   background: #983530;
 }
 #siempreEsHoy2002 {
-  background: #ADBDD1;
+  background: #adbdd1;
 }
 #ahiVamos2006 {
-  background: #14171B;
+  background: #14171b;
 }
 #fuerzaNatural2009 {
-  background: #1B2421;
+  background: #1b2421;
 }
 #coloresSantos1992 {
-  background: #33158D;
+  background: #33158d;
 }
-#friccionGrupo{
-  background: #0567BF;
+#friccionGrupo {
+  background: #0567bf;
 }
-#medidaUniversal1999{
+#medidaUniversal1999 {
   background: #ecb474;
 }
 #masBien2001 {
   background: #84b4cf;
 }
 #siempreEsHoyReversiones2003 {
-  background: #EC84AF;
+  background: #ec84af;
 }
+
+/* ============================= */
+/* Despedida */
+
+.despedida {
+  padding: 2rem;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: calc(2rem + 1vw);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  max-width: 625px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 1rem;
+}
+
 /* ========================================== */
 /* Footer */
 .footer {
   background: #000;
   color: #fff;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .footerContent {
@@ -351,10 +379,9 @@ html {
 /* ======= MEDIA QUERIES ======= */
 
 @media screen and (max-width: 723px) {
-  
-.wrapper{
-  overflow-x: hidden;
-}
+  .wrapper {
+    overflow-x: hidden;
+  }
 
   /* Barra de navegación estilo hamburguesa */
   .nav-desktop {
@@ -416,7 +443,7 @@ html {
 
   .nav-menu li a:active,
   .nav-menu li a:hover {
-    color: #DBCE02;
+    color: #dbce02;
     transition: all 0.5s;
   }
 
@@ -435,14 +462,14 @@ html {
   }
 
   /* Header */
-  
+
   .headerContent {
     padding-top: 1rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
+
   .headerContent .headerImg {
     height: calc(1rem + 50vh);
   }
@@ -461,12 +488,11 @@ html {
   }
 
   /* Footer */
-  .my-profile{
-   flex-direction: column;
+  .my-profile {
+    flex-direction: column;
   }
 
   .linksFooter {
-    padding: .2rem 0;
+    padding: 0.2rem 0;
   }
 }
- 
