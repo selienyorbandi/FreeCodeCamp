@@ -209,7 +209,8 @@
   z-index: 99;
 }
 
-.firstDescription > p {
+.firstDescription > p,
+.secondDescription > p {
   font-family: "Yaldevi Colombo Regular", sans-serif;
   padding: 2rem;
   font-size: 1.5rem;
@@ -228,6 +229,57 @@
   width: 100%;
   object-fit: contain;
   border: 0.3rem solid #232224;
+}
+
+/* Second Section - Description of the product #2 */
+.secondDescription {
+  text-align: center;
+  position: relative;
+}
+.descriptionIcons {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.1fr;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.descriptionIcons > figcaption {
+  padding: 1rem;
+  align-self: flex-start;
+}
+
+.speechBubble-down::after {
+  display: none;
+  padding: 0rem;
+}
+
+.speechBubble-down {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #232224;
+  font-family: "Yaldevi Colombo Bold", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+.speechBubleTriangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 20px 15px;
+  border-color: transparent transparent #232224 transparent;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* =============MEDIA QUERIES============= */
@@ -261,6 +313,11 @@
   /* First Section - Description of the product */
   .firstDescription-text {
     padding-bottom: 3rem;
+  }
+
+  /* Second Section - Description of the product #2 */
+  .descriptionIcons > img {
+    width: calc(1rem + 10vw);
   }
 }
 /* ================================================================= */
@@ -325,6 +382,12 @@
   .mobileMenu {
     display: none;
   }
+
+  /* Second Description */
+  .speechBubble-down {
+    max-height: 350px;
+    padding-top: 4rem;
+  }
 }
 
 /* ================================================================= */
@@ -384,7 +447,8 @@
     border-width: 65px 50px 0 50px;
   }
 
-  .firstDescription > p {
+  .firstDescription > p,
+  .secondDescription > p {
     font-size: calc(2.2rem + 1vw);
     text-align: left;
     grid-column: 1 / 2;
@@ -401,5 +465,13 @@
   }
   .firstDescription-img img {
     border: 0.5rem solid #232224;
+  }
+
+  /* Second Description */
+  .speechBubble-down {
+    justify-content: space-evenly;
+  }
+  .speechBubleTriangle {
+    border-width: 0 23px 28px 23px;
   }
 }
