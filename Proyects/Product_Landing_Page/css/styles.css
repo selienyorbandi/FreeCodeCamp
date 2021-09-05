@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: #c4b795;
+  --second-bg-color: #706e71;
+  --third-bg-color: #d9d9d7;
+  --bubble-bg-color: #232224;
+  --main-txt-color: #000;
+  --second-txt-color: #fff;
+  --third-txt-color: #000;
+  --bubble-txt-color: #fff;
+  --cta-bg-color: #000;
+  --cta-txt-color: #ff9000;
+}
+
 @font-face {
   font-family: "Yaldevi Colombo Regular";
   font-style: normal;
@@ -39,7 +52,7 @@
 .wrapper {
   width: 100%;
   height: 100%;
-  background: #c4b795;
+  background: var(--main-bg-color);
   margin-top: 10vh;
   overflow-x: hidden;
 }
@@ -57,7 +70,7 @@
   width: 100vw;
   justify-content: space-between;
   align-items: center;
-  background: #d9d9d7;
+  background: var(--third-bg-color);
   box-shadow: inset 0px -1px 8px rgba(0, 0, 0, 0.25);
   z-index: 999999;
 }
@@ -69,7 +82,7 @@
 
 .bar-btn {
   font-size: 2rem;
-  color: #000;
+  color: var(--third-txt-color);
   cursor: pointer;
   padding: 0 1rem;
 }
@@ -79,7 +92,7 @@
   width: 100%;
   height: 0;
   top: 10vh;
-  background-color: #d9d9d7;
+  background: var(--third-bg-color);
   text-align: center;
   transition: all 0.5s;
   padding: 0;
@@ -102,7 +115,7 @@
 }
 
 .nav-menu li a {
-  color: rgb(0, 0, 0);
+  color: var(--third-txt-color);
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
@@ -110,21 +123,21 @@
 
 .nav-menu li a:active,
 .nav-menu li a:hover {
-  border-bottom: #000 solid 0.2rem;
+  border-bottom: var(--third-txt-color) solid 0.2rem;
   transition: all 0.2s;
 }
 
 .nav-menu .navCallToAction a {
-  color: #ff9000;
-  background: #000;
+  color: var(--cta-txt-color);
+  background: var(--cta-bg-color);
   padding: 0.7rem 1.3rem;
   border-radius: 0.6rem;
 }
 
 .navCallToAction a:hover {
-  background: #ff9000;
-  color: #000;
-  border: #000 solid 0.05rem;
+  background: var(--cta-txt-color);
+  color: var(--third-txt-color);
+  border: var(--third-txt-color) solid 0.05rem;
   transition: all 0.3s ease-in;
 }
 
@@ -161,7 +174,7 @@
 .header .productName {
   width: 100%;
   background: #242223;
-  color: #ff9000;
+  color: var(--cta-txt-color);
   text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.6);
   font-size: calc(1rem + 1vw);
   margin: 0.7rem 0;
@@ -182,13 +195,13 @@
 
 /* First Section - Description of the product */
 .firstDescription {
-  background: #706e71;
-  color: #fff;
+  background: var(--second-bg-color);
+  color: var(--second-txt-color);
   text-align: center;
 }
 
 .speechBubble {
-  background: #232224;
+  background: var(--bubble-bg-color);
   font-family: "Yaldevi Colombo Bold", sans-serif;
   font-size: 1.5rem;
   padding: 1.5rem;
@@ -202,7 +215,7 @@
   height: 0;
   border-style: solid;
   border-width: 45px 30px 0 30px;
-  border-color: #232224 transparent transparent transparent;
+  border-color: var(--bubble-bg-color) transparent transparent transparent;
   left: 0;
   right: 0;
   margin: auto;
@@ -228,16 +241,23 @@
 .firstDescription-img img {
   width: 100%;
   object-fit: contain;
-  border: 0.3rem solid #232224;
+  border: 0.3rem solid var(--bubble-bg-color);
 }
 
 /* Second Section - Description of the product #2 */
 .secondDescription {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-tracks: center;
+}
+.secondDescription-text{
+  display: flex;
+  align-items: center;
 }
 .descriptionIcons {
-  color: #fff;
+  color: var(--bubble-txt-color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.1fr;
@@ -263,17 +283,17 @@
   justify-items: center;
   align-content: center;
   justify-content: center;
-  background: #232224;
+  background: var(--bubble-bg-color);
   font-family: "Yaldevi Colombo Bold", sans-serif;
   font-size: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0 0;
 }
 .speechBubleTriangle {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 15px 20px 15px;
-  border-color: transparent transparent #232224 transparent;
+  border-color: transparent transparent var(--bubble-bg-color) transparent;
   padding: 0;
   margin: 0;
   position: relative;
@@ -281,6 +301,8 @@
   right: 0;
   margin: auto;
 }
+
+/* Technical description */
 
 /* =============MEDIA QUERIES============= */
 
@@ -317,7 +339,7 @@
 
   /* Second Section - Description of the product #2 */
   .descriptionIcons > img {
-    width: calc(1rem + 10vw);
+    width: calc(1rem + 6vw);
   }
 }
 /* ================================================================= */
@@ -328,7 +350,7 @@
   .navDesktop {
     width: 100%;
     height: 10vh;
-    background: #d9d9d7;
+    background: var(--third-bg-color);
     box-shadow: inset 0px -1px 8px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
@@ -354,7 +376,7 @@
   }
 
   .navDesktop .navLinks a {
-    color: #000;
+    color: var(--third-txt-color);
     margin: 1rem;
     font-size: calc(1rem + 1vw);
     text-decoration: none;
@@ -362,20 +384,20 @@
 
   .navDesktop .navLinks a:hover {
     width: 100%;
-    border-top: #000 solid 0.15rem;
+    border-top: var(--third-txt-color) solid 0.15rem;
   }
 
   .navDesktop .navLinks .navCallToAction a {
-    background: #000;
-    color: #ff9000;
+    background: var(--third-txt-color);
+    color: var(--cta-txt-color);
     padding: 0.25rem 1rem;
     border-radius: 0.2rem;
   }
 
   .navDesktop .navLinks .navCallToAction a:hover {
-    background: #ff9000;
-    color: #000;
-    border: #000 solid 0.05rem;
+    background: var(--cta-txt-color);
+    color: var(--cta-bg-color);
+    border: var(--cta-bg-color) solid 0.05rem;
     transition: all 0.3s ease-in-out;
   }
 
@@ -386,8 +408,11 @@
   /* Second Description */
   .speechBubble-down {
     max-height: 350px;
-    padding-top: 4rem;
   }
+  .secondDescription-text{
+    min-height: 50vh;
+  }
+  
 }
 
 /* ================================================================= */
@@ -464,7 +489,7 @@
     padding-bottom: 2.2rem;
   }
   .firstDescription-img img {
-    border: 0.5rem solid #232224;
+    border: 0.5rem solid var(--bubble-bg-color);
   }
 
   /* Second Description */
