@@ -211,6 +211,7 @@
   background: var(--bubble-bg-color);
   font-family: var(--bold-yaldevi), sans-serif;
   font-size: 1.5rem;
+  color: var(--second-txt-color);
   padding: 1.5rem;
   margin: 1.5rem 0 2rem 0;
 }
@@ -413,6 +414,47 @@
   padding: 1rem 2rem;
   font-size: calc(1rem + 1vw);
 }
+
+/* Social Proof */
+.speechBubble {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.socialProof {
+  background: var(--main-bg-color);
+}
+.costumerTestimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1366px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family: var(--regular-yaldevi);
+}
+
+.costumerTestimonial {
+  background: rgba(255, 255, 255, 0.507);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.costumerTestimonial h4 {
+  font-family: var(--bold-yaldevi);
+  font-size: 1.5rem;
+}
+.costumerQuote {
+  font-size: 1.3rem;
+  padding: 1.5rem 0;
+}
+.costumerPicture img {
+  border-radius: 50%;
+}
+
 
 /* =============MEDIA QUERIES============= */
 
@@ -682,6 +724,9 @@
   .menu {
     max-width: inherit;
     max-height: inherit;
+  }
+  .h2 h2 {
+    padding: 1rem;
   }
   #h2Fir {
     grid-column: 2 / 3;
