@@ -455,6 +455,32 @@
   border-radius: 50%;
 }
 
+/* Footer */
+.footer {
+  background: var(--third-bg-color);
+  font-family: var(--medium-yaldevi);
+  
+}
+.footerLinks {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+.footerLinks > section > ul {
+  list-style: none;
+}
+.footerLinks > section {
+  padding: 1rem;
+}
+.socialMedia {
+  padding: .5rem 0;
+}
 
 /* =============MEDIA QUERIES============= */
 
