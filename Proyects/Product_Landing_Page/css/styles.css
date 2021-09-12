@@ -481,6 +481,9 @@
 .socialMedia {
   padding: .5rem 0;
 }
+.footer a {
+  text-decoration: none;
+}
 
 /* =============MEDIA QUERIES============= */
 
